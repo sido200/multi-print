@@ -1,0 +1,42 @@
+.filter-side{
+  display: flex;
+  position: absolute;
+  clip-path: inset(0  0  0 100%);
+  background-color: white;
+  width: 400px;
+  flex-direction: column;
+  z-index: 2;
+  height: 100vh;
+  top: 0;
+  right: 0;
+  justify-content: center;
+  z-index: 12;
+  transition: 0.5s;
+  pointer-events: fill;
+}
+.open-side{
+
+  clip-path: inset(0 0 0 0);
+
+
+}
+
+
+  .items-filter li{
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  padding: 10px;
+ 
+
+  cursor: pointer;
+  text-align: center;
+  font-size: 1.5rem;
+  
+  }
+  .items-filter{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
