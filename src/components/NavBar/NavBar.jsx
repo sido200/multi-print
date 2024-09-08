@@ -13,17 +13,17 @@ export default function NavBar() {
   return (
     <nav className="nav-bar">
       <div className="logo">
-        <Link href="/LandingPage">
+        <Link href="/" >
           <Image src={logo} alt="logo" />
         </Link>
       </div>
       <div className={isOpen ? "items active" : "items"}>
         <ul>
-          <Link href="/LandingPage#hero-section">
+          <Link href="/#hero-section">
             <li>Home</li>
           </Link>
           <hr />
-          <Link href="/LandingPage#about-section">
+          <Link href="/#about-section">
             <li>About us</li>
           </Link>
           <hr />
@@ -36,7 +36,7 @@ export default function NavBar() {
           </Link>
 
           <hr />
-          <Link href="/LandingPage#Testimonial-section">
+          <Link href="/#Testimonial-section">
             <li>Testimonials</li>
           </Link>
         </ul>
