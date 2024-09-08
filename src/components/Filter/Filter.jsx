@@ -22,7 +22,7 @@ export default function Filter() {
            
           
             </ul>
-          <div className="close">
+          <div className="close2">
           <IoClose
             size={23}
             onClick={() => {
