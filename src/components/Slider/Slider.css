@@ -39,17 +39,17 @@
 }
 .swiper-slide:nth-child(1) .left-slide{
  
- background-image: url("../../app/assets/frame1.png");
+ background-image: url("../../app/[locale]/assets/frame1.png");
  
 }
 .swiper-slide:nth-child(2) .left-slide{
  
- background-image: url("../../app/assets/frame2.png");
+ background-image: url("../../app/[locale]/assets/frame2.png");
  
 }
 .swiper-slide:nth-child(3) .left-slide{
  
- background-image: url("../../app/assets/frame3.png");
+ background-image: url("../../app/[locale]/assets/frame3.png");
  
 }
 .swiper-slide:nth-child(1) .right-slide{

@@ -17,7 +17,22 @@ body {
   scroll-behavior: smooth;
 }
 
+.rtl {
+  direction: rtl;
+}
+.rtl #product-section{
 
+  padding: 20px 150px !important;
+
+ 
+
+}
+.rtl .swiper{
+  direction: ltr;
+}
+.rtl .swiper .swiper-slide{
+  direction: rtl;
+}
 body:has(.active){
   position: fixed;
   top: 0;
@@ -160,6 +175,9 @@ align-items: center;
  padding: 10px 20px;
  cursor: pointer;
 
+}
+.jaune{
+  color: rgba(248, 155, 49, 1);
 }
 .button button:last-child{
  background-color: 

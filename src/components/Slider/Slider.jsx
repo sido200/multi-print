@@ -1,6 +1,6 @@
 "use client";
 import { Swiper, SwiperSlide } from "swiper/react";
-import produit from "../../app/assets/produit.png";
+import produit from "../../app/[locale]/assets/produit.png";
 import { FaArrowRight } from "react-icons/fa6";
 import "swiper/css";
 import { Autoplay } from "swiper/modules";
@@ -8,10 +8,12 @@ import "./Slider.css";
 import Image from "next/image";
 import { Outfit } from "next/font/google";
 import Link from "next/link";
+import { useTranslations } from "next-intl";
 
 const outfit = Outfit({ subsets: ["latin"] });
 
 export default function Slider() {
+  const t = useTranslations('HomePage');
   return (
     <Swiper
       className="mySwiper"
@@ -38,16 +40,13 @@ export default function Slider() {
           className="left-slide"
           style={{ backgroundSize: "cover", backgroundPosition: "center" }}
         >
-          <h2>Title for the Products</h2>
+          <h2>{t('products-title')}</h2>
           <p>
-            In publishing and graphic design, Lorem ipsum is a placeholder text
-            commonly used to demonstrate the visual form of a document or a
-            typeface without relying on meaningful content. Lorem ipsum may be
-            used as a placeholder before the final copy is available.
+          {t('products-details')}
           </p>
           <Link href="/Product">
             <button className={outfit.className}>
-              <span> Explore Products</span>
+              <span>  {t('explore-btn')}</span>
               <FaArrowRight />
             </button>
           </Link>
@@ -61,16 +60,13 @@ export default function Slider() {
           className="left-slide"
           style={{ backgroundSize: "cover", backgroundPosition: "center" }}
         >
-          <h2>Title for the Products</h2>
+          <h2>{t('products-title')}</h2>
           <p>
-            In publishing and graphic design, Lorem ipsum is a placeholder text
-            commonly used to demonstrate the visual form of a document or a
-            typeface without relying on meaningful content. Lorem ipsum may be
-            used as a placeholder before the final copy is available.
+          {t('products-details')}
           </p>
           <Link href="/Product">
             <button className={outfit.className}>
-              <span> Explore Products</span>
+              <span>  {t('explore-btn')}</span>
               <FaArrowRight />
             </button>
           </Link>
@@ -84,22 +80,23 @@ export default function Slider() {
           className="left-slide"
           style={{ backgroundSize: "cover", backgroundPosition: "center" }}
         >
-          <h2>Title for the Products</h2>
+          <h2>{t('products-title')}</h2>
           <p>
-            In publishing and graphic design, Lorem ipsum is a placeholder text
-            commonly used to demonstrate the visual form of a document or a
-            typeface without relying on meaningful content. Lorem ipsum may be
-            used as a placeholder before the final copy is available.
+          {t('products-details')}
           </p>
-          <button className={outfit.className}>
-            <span> Explore Products</span>
-            <FaArrowRight />
-          </button>
+          <Link href="/Product">
+            <button className={outfit.className}>
+              <span>  {t('explore-btn')}</span>
+              <FaArrowRight />
+            </button>
+          </Link>
         </div>
         <div className="right-slide">
           <Image src={produit} alt="produit" />
         </div>
       </SwiperSlide>
+     
+      
     </Swiper>
   );
 }

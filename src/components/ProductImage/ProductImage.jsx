@@ -1,7 +1,7 @@
 'use client'
 import React, { useState } from 'react'
 import "./ProductImage.css"
-import productImAGE from "../../app/assets/product-details.jpg"
+import productImAGE from "../../app/[locale]/assets/product-details.jpg"
 import Image from 'next/image'
 
 export default function ProductImage() {

@@ -5,14 +5,16 @@ import React from 'react'
 
 import './Product.css'
 import Filter from '@/components/Filter/Filter';
+import { useTranslations } from 'next-intl';
 
 export default function Product() {
+  const t = useTranslations('products-page');
   return (
     <main className='product-page'>
       <div className="header">
       <div className="titles">
-      <h2>Take a look at our products</h2>
-      <p>Introducing our latest Print marvel - Pushing boundaries and redefining print excellence  </p>
+      <h2>{t("title")}</h2>
+      <p>{t("description")}</p>
       </div>
  <Filter/>
 

@@ -7,16 +7,19 @@ import contactImage2 from "./assets/contact-image2.jpg"
 
 import ProductSlide from "@/components/ProductSlide/ProductSlide";
 import TestimonialSlider from "@/components/TestimonialSlider/TestimonialSlider";
+import { useTranslations } from "next-intl";
 
 
 export default function LandingPage() {
+  const t = useTranslations('HomePage');
+
   return (
     <main className="landing-page">
       <section id="hero-section">
         <Slider />
       </section>
       <section id="data-section">
-        <h2>Read the ticket thoroughly to understand the costumer’s</h2>
+        <h2>{t("data-title")}</h2>
         <div className="grid-card">
           <DataCard />
           <DataCard />
@@ -25,24 +28,23 @@ export default function LandingPage() {
       </section>
       <section id="about-section">
         <div className="left-about">
-          <h2>Discovering Design & print Mastery evolution</h2>
+          <h2> {t("about-section.title")} </h2>
           <p>
-            Exploring the intersection of vision, innovation, craftmanship,
-            provision and performing design & print solutions
+          {t("about-section.description")}
           </p>
           <div className="stat">
             <div className="stat-1">
               <h3>+20</h3>
-              <p>Ready to use products</p>
+              <p>  {t("about-section.stats.label1")}</p>
             </div>
             <div className="stat-1">
               <h3>99%</h3>
-              <p>Customer satisfaction</p>
+              <p> {t("about-section.stats.label")}</p>
             </div>
           </div>
           <div className="button">
-            <button >Contact us</button>
-            <button >Book a call </button>
+            <button > {t("about-section.buttons.contact")}</button>
+            <button > {t("about-section.buttons.book")} </button>
           </div>
         </div>
         <div className="right-about">
@@ -51,8 +53,8 @@ export default function LandingPage() {
       </section>
       <section id="product-section">
        <div className="text">
-       <h2>Our Latest Products </h2>
-       <p>Introducing our latest Print marvel - Pushing boundaries and redefining print excellence  </p>
+       <h2> {t("product-section.title")} </h2>
+       <p>{t("product-section.description")} </p>
        </div>
         <ProductSlide/>
       </section>
@@ -61,14 +63,14 @@ export default function LandingPage() {
           <Image src={contactImage2} alt="vision-image"/>
         </div>
       <div className="right-vision">
-          <h2>Multiprint's journey to printing excellence</h2>
-          <h3>Vision to reality</h3>
+          <h2>{t("right-vision.title")}</h2>
+          <h3>{t("right-vision.sections.subtitle1")}</h3>
           <p>
-          Mulitprint’s remarkable journey in the realm of design and print innovation has consistently steered the company towards a path of unparalleled excellence.
+          {t("right-vision.sections.text1")}
           </p>
-          <h3>Creating dreams</h3>
+          <h3>{t("right-vision.sections.subtitle2")}</h3>
           <p>
-          Pioneering innovation, collaborative excellence, and unwavering commitment to transforming vision into timeless realities
+          {t("right-vision.sections.text2")}
           </p>
       
          
@@ -76,16 +78,16 @@ export default function LandingPage() {
       
       </section>
       <section id="contact-section">
-        <h2>Let’s Build your vision</h2>
-        <p>Reach out to us for expert guidance, collaborative design, and tailored to shape your vision into reality</p>
+        <h2>  {t("contact-section.title")}</h2>
+        <p>{t("contact-section.description")}</p>
         <div className="button">
-            <button >Contact us</button>
-            <button >Book a call </button>
+            <button >{t("contact-section.buttons.contact")}</button>
+            <button >{t("contact-section.buttons.book")}</button>
           </div>
       </section>
       <section id="Testimonial-section">
-    <h2>Testimonial</h2>
-    <h3>What our <span>costumers</span> have to say</h3>
+    <h2>{t("Testimonial-section.title")}</h2>
+    <h3>{t("Testimonial-section.subtitle")}</h3>
     <TestimonialSlider/>
       </section>
     </main>

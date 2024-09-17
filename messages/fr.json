@@ -1,0 +1,83 @@
+{
+  "HomePage": {
+    "home": "Accueil",
+    "about": "À propos de nous",
+    "contact": "Contactez-nous",
+    "products": "Produits",
+    "Testimonials": "Témoignages",
+    "products-title": "Titre pour les Produits",
+    "products-details": "En édition et en conception graphique, le Lorem ipsum est un texte de substitution couramment utilisé pour démontrer la forme visuelle d'un document ou d'une police de caractères sans se baser sur un contenu significatif. Le Lorem ipsum peut être utilisé comme espace réservé avant que le texte définitif ne soit disponible.",
+    "explore-btn": "Explorer les Produits",
+    "Card-data-desc": "Vos aspirations alimentent notre créativité. Nous commençons par écouter attentivement, comprendre vos objectifs et imaginer.",
+    "data-title": "Lisez attentivement le billet pour comprendre le client",
+    "data-title-title": "Consultation visionnaire",
+    "see-more": "Voir plus",
+    "product-section": {
+      "title": "Nos derniers produits",
+      "description": "Découvrez notre dernière merveille d'impression - repoussant les limites et redéfinissant l'excellence de l'impression."
+    },
+    "about-section": {
+    "title": "Découvrir l'évolution de la maîtrise du design et de l'impression",
+    "description": "Explorer l'intersection de la vision, de l'innovation, du savoir-faire, de la prestation et de la réalisation de solutions de design et d'impression.",
+    "stats": {
+        "label1": "Produits prêts à l'emploi",
+        "label": "Satisfaction client"
+    },
+    "buttons": {
+      "contact": "Contactez-nous",
+      "book": "Réserver un appel"
+    }
+  },
+  "right-vision": {
+    "title": "Le parcours de Multiprint vers l'excellence en impression",
+    "sections": {
+      "subtitle1": "De la vision à la réalité",
+      "text1": "Le parcours remarquable de Multiprint dans le domaine de l'innovation en design et impression a constamment orienté l'entreprise vers un chemin d'excellence inégalée.",
+      "subtitle2": "Créer des rêves",
+      "text2": "Innovation de pionnier, excellence collaborative et engagement indéfectible à transformer la vision en réalités intemporelles."
+    }
+  },
+  "contact-section": {
+    "title": "Construisons Votre Vision",
+    "description": "Contactez-nous pour des conseils d'experts, un design collaboratif et des solutions personnalisées pour concrétiser votre vision.",
+    "buttons": {
+      "contact": "Contactez-nous",
+      "book": "Réserver un appel"
+    }
+  },
+  "Testimonial-section": {
+    "title": "Témoignages",
+    "subtitle": "Ce que nos clients ont à dire"
+  },
+  "footer": {
+    "top-footer": {
+      "description": "En édition et design graphique, Lorem ipsum est un texte de substitution couramment utilisé pour",
+      "button": "News Letters",
+      "links": {
+        "explore": "Explorer",
+        "useful-links": {
+          "title": "Liens utiles",
+          "Give-feedback": "Donner un avis",
+          "Support": "Support"
+        }
+      }
+    },
+   
+      "copyright": "© 2024 multiprint tous droits réservés"
+    
+  }
+
+    
+  },
+  "products-page": {
+    "title": "Découvrez nos produits",
+    "description": "Découvrez notre dernière merveille d'impression - Repoussant les limites et redéfinissant l'excellence en impression"
+  }  ,
+  "products-details": {
+    "title": "Découvrez nos produits",
+    "description": "Présentation de notre dernière merveille d'impression - repousser les limites et redéfinir l'excellence en matière d'impression",
+      "see-more":"Voir plus",
+    "contact": "Contactez l'equipe"
+  }
+  
+}

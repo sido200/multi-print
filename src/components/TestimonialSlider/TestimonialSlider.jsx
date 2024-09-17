@@ -1,6 +1,6 @@
 "use client";
 import { Swiper, SwiperSlide } from "swiper/react";
-import profil from "../../app/assets/profil.jpg"
+import profil from "../../app/[locale]/assets/profil.jpg"
 import "swiper/css";
 import { FaStar } from "react-icons/fa";
 import "./TestimonialSlider.css";

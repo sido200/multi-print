@@ -1,10 +1,12 @@
 import Image from "next/image";
-import productImage from "../../app/assets/product.jpg";
+import productImage from "../../app/[locale]/assets/product.jpg";
 import "./CardProduct.css"
 import Link from "next/link";
+import { useLocale } from "next-intl";
 export default function CardProduct() {
+  const localActive = useLocale();
   return (
-    <Link href="/DetailsProduct">
+    <Link href={`/${localActive}/DetailsProduct`}>
     <div className="card-product">
       
     <div className="img">  <Image src={productImage} alt="product" /></div>

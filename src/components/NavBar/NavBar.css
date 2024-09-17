@@ -38,6 +38,7 @@
   height: 30px;
   width: 30px;
   border-radius: 50%;
+  cursor: pointer;
 }
 .language {
   font-size: 20px;
@@ -111,6 +112,9 @@ border-bottom: none;
 }
 .active-language{
   clip-path: inset(0  0  0 0);
+}
+.language >span{
+  text-transform: uppercase;
 }
 @media screen and (max-width: 1240px) {
     .items{
