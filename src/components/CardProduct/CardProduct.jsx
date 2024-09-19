@@ -1,18 +1,26 @@
 import Image from "next/image";
 import productImage from "../../app/[locale]/assets/product.jpg";
-import "./CardProduct.css"
+import "./CardProduct.css";
 import Link from "next/link";
 import { useLocale } from "next-intl";
-export default function CardProduct() {
+
+export default function CardProduct({ product }) {
   const localActive = useLocale();
+
   return (
-    <Link href={`/${localActive}/DetailsProduct`}>
-    <div className="card-product">
-      
-    <div className="img">  <Image src={productImage} alt="product" /></div>
-      <h3>Product Name</h3>
-      <h4>Type</h4>
-    </div>
+    <Link href={`/${localActive}/DetailsProduct/${product?._id}`}>
+      <div className="card-product">
+        <div className="img">
+          <img
+            src={product?.images[0]}
+            alt="product"
+            width={200}
+            height={200}
+          />
+        </div>
+        <h3>{product?.titlefr}</h3>
+        <h4>Type</h4>
+      </div>
     </Link>
   );
 }

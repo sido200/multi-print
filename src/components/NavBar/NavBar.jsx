@@ -17,15 +17,15 @@ export default function NavBar() {
   const [isLanguage, setIsLanguage] = useState(false);
   const localActive = useLocale();
   const [Language, setLanguage] = useState(`${localActive}`);
-  const t = useTranslations('HomePage');
+  const t = useTranslations("HomePage");
   const [isPending, startTransition] = useTransition();
   const router = useRouter();
 
   useEffect(() => {
-    if (Language == 'ar') {
-      document.body.classList.add('rtl');
+    if (Language == "ar") {
+      document.body.classList.add("rtl");
     } else {
-      document.body.classList.remove('rtl');
+      document.body.classList.remove("rtl");
     }
     if (isLanguage) {
       startTransition(() => {
@@ -44,23 +44,23 @@ export default function NavBar() {
       <div className={isOpen ? "items active" : "items"}>
         <ul>
           <Link href="/#hero-section">
-            <li>{t('home')}</li>
+            <li>{t("home")}</li>
           </Link>
           <hr />
           <Link href="/#about-section">
-            <li>{t('about')}</li>
+            <li>{t("about")}</li>
           </Link>
           <hr />
           <Link href={`/${localActive}/Product`}>
-            <li>{t('products')}</li>
+            <li>{t("products")}</li>
           </Link>
           <hr />
           <Link href={`/${localActive}/Contact`}>
-            <li>{t('contact')}</li>
+            <li>{t("contact")}</li>
           </Link>
           <hr />
           <Link href="/#Testimonial-section">
-            <li>{t('Testimonials')}</li>
+            <li>{t("Testimonials")}</li>
           </Link>
         </ul>
         <div className="close">
@@ -75,7 +75,7 @@ export default function NavBar() {
       <div className="language">
         <span>{localActive}</span>
         <Image
-          src={localActive === 'en' ? en : localActive === 'fr' ? fr : ar}
+          src={localActive === "en" ? en : localActive === "fr" ? fr : ar}
           alt="Flag"
           width={24}
           height={24}
@@ -98,15 +98,15 @@ export default function NavBar() {
           }
         >
           <ul>
-            <li onClick={() => setLanguage('en')}>
+            <li onClick={() => setLanguage("en")}>
               <Image src={en} alt="English Flag" width={24} height={24} />
               <span> English</span>
             </li>
-            <li onClick={() => setLanguage('fr')}>
+            <li onClick={() => setLanguage("fr")}>
               <Image src={fr} alt="French Flag" width={24} height={24} />
               <span> française</span>
             </li>
-            <li onClick={() => setLanguage('ar')}>
+            <li onClick={() => setLanguage("ar")}>
               <Image src={ar} alt="Arabic Flag" width={24} height={24} />
               <span>Arabe</span>
             </li>

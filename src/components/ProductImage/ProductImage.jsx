@@ -1,12 +1,13 @@
-'use client'
-import React, { useState } from 'react'
-import "./ProductImage.css"
-import productImAGE from "../../app/[locale]/assets/product-details.jpg"
-import Image from 'next/image'
+"use client";
+import React, { useState } from "react";
+import "./ProductImage.css";
+import productImAGE from "../../app/[locale]/assets/product-details.jpg";
+import Image from "next/image";
 
-export default function ProductImage() {
+export default function ProductImage({ Product }) {
   const [position, setPosition] = useState({ x: 0, y: 0 });
   const [isHovered, setIsHovered] = useState(false);
+  console.log(Product);
 
   const handleMouseMove = (e) => {
     const { offsetX, offsetY, target } = e.nativeEvent;
@@ -22,20 +23,45 @@ export default function ProductImage() {
   const handleMouseLeave = () => setIsHovered(false);
   return (
     <div className="product-image">
-    <div className="big-image"
-        onMouseMove={handleMouseMove} 
-        onMouseEnter={handleMouseEnter} 
-        onMouseLeave={handleMouseLeave}>
-    <Image src={productImAGE} alt='details'  className={`zoom-image ${isHovered ? 'hovered' : ''}`}
-        style={{
-          transformOrigin: `${position.x}% ${position.y}%`
-        }}/>
+      <div
+        className="big-image"
+        onMouseMove={handleMouseMove}
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
+      >
+        <img
+          src={Product?.images[0]}
+          alt="details"
+          className={`zoom-image ${isHovered ? "hovered" : ""}`}
+          style={{
+            transformOrigin: `${position.x}% ${position.y}%`,
+            objectFit: "cover",
+          }}
+        />
+      </div>
+      <div className="small-image">
+        <img
+          src={Product?.images[0]}
+          alt="details"
+          style={{
+            objectFit: "cover",
+          }}
+        />
+        <img
+          src={Product?.images[0]}
+          alt="details"
+          style={{
+            objectFit: "cover",
+          }}
+        />
+        <img
+          src={Product?.images[0]}
+          alt="details"
+          style={{
+            objectFit: "cover",
+          }}
+        />
+      </div>
     </div>
-    <div className="small-image">
-    <Image src={productImAGE} alt='details'/>
-    <Image src={productImAGE} alt='details'/>
-    <Image src={productImAGE} alt='details'/>
-    </div>
-     </div>
-  )
+  );
 }

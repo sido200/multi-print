@@ -4,18 +4,29 @@ import { Swiper, SwiperSlide } from "swiper/react";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
-
 import "./ProductSlide.css";
+import { getProducts } from "@/app/services/products";
+import { useState, useEffect } from "react";
 
 // import required modules
-
 
 import CardProduct from "../CardProduct/CardProduct";
 import { Autoplay } from "swiper/modules";
 export default function ProductSlide() {
+  const [products, setProducts] = useState([]);
+
+  useEffect(() => {
+    getProducts()
+      .then((res) => {
+        setProducts(res.data.products);
+      })
+      .catch((err) => {
+        console.error(err);
+      });
+  }, []);
   return (
     <>
-      <Swiper    
+      <Swiper
         spaceBetween={20}
         pagination={{
           clickable: true,
@@ -23,8 +34,8 @@ export default function ProductSlide() {
         utoplay={{
           delay: 5000,
           disableOnInteraction: false,
-         
-        }} modules={[Autoplay]}
+        }}
+        modules={[Autoplay]}
         breakpoints={{
           640: {
             slidesPerView: 1,
@@ -37,26 +48,15 @@ export default function ProductSlide() {
           1024: {
             slidesPerView: 4,
             spaceBetween: 20,
-          }}} className="mySwiper">
-       
-        <SwiperSlide>
-       <CardProduct/>
-        </SwiperSlide>
-        <SwiperSlide>
-       <CardProduct/>
-        </SwiperSlide>
-        <SwiperSlide>
-       <CardProduct/>
-        </SwiperSlide>
-        <SwiperSlide>
-       <CardProduct/>
-        </SwiperSlide>
-        <SwiperSlide>
-       <CardProduct/>
-        </SwiperSlide>
-        <SwiperSlide>
-       <CardProduct/>
-        </SwiperSlide>
+          },
+        }}
+        className="mySwiper"
+      >
+        {products.map((product) => (
+          <SwiperSlide key={product.id}>
+            <CardProduct product={product} />
+          </SwiperSlide>
+        ))}
       </Swiper>
     </>
   );
