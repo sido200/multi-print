@@ -2,20 +2,20 @@
 import { useState } from "react";
 import { IoIosArrowForward } from "react-icons/io";
 import "./Contact.css";
-
 import { FiUser, FiPhone } from "react-icons/fi";
 import { FaRegFileAlt } from "react-icons/fa";
 import { MdAlternateEmail } from "react-icons/md";
+import { createContact } from "@/app/services/contact";
 
 export default function Contact() {
   const [clickedQuestions, setClickedQuestions] = useState([0]);
 
   const initialFormData = {
-    firstName: "",
+    firstname: "",
     name: "",
     email: "",
     phone: "",
-    description: "",
+    message: "",
   };
 
   const [formData, setFormData] = useState(initialFormData);
@@ -41,27 +41,37 @@ export default function Contact() {
     console.log(formData);
     // Submit the formData to an API or do further processing
 
+    createContact(formData);
+
     // Reset form data after submission
     setFormData(initialFormData);
   };
 
   const qst = [
-    { qst: "Toutes les options du Plan Basique", reponse: "un système de..." },
+    {
+      qst: "Toutes les options du Plan Basique",
+      reponse:
+        "un système de réservation en ligne sécurisé, et un tableau de bord intuitif pour gérer vos réservations. Personnalisez votre profil avec des photos et descriptions, et recevez des notifications par e-mail pour chaque nouvelle réservation",
+    },
     {
       qst: "Visibilité sur les réseaux sociaux",
-      reponse: "Bénéficiez d'une...",
+      reponse:
+        "Bénéficiez d'une promotion sur nos comptes de réseaux sociaux pour augmenter votre visibilité et atteindre un public plus large. Profitez de notre présence en ligne pour attirer plus de clients potentiels.",
     },
     {
       qst: "Système de réservation avancé",
-      reponse: "Accédez à des fonctionnalités...",
+      reponse:
+        "Accédez à des fonctionnalités de réservation supplémentaires, telles que la personnalisation des options de réservation et la gestion des paiements. Offrez une expérience de réservation fluide et professionnelle à vos clients.",
     },
     {
       qst: "Tableau de bord amélioré",
-      reponse: "Utilisez des outils de gestion...",
+      reponse:
+        "Utilisez des outils de gestion avancés pour une analyse plus approfondie de vos performances. Obtenez des rapports détaillés, suivez les tendances de réservation et optimisez vos opérations quotidiennes.",
     },
     {
       qst: "Support client standard",
-      reponse: "Bénéficiez d'une assistance...",
+      reponse:
+        "Bénéficiez d'une assistance par e-mail et téléphone pour résoudre rapidement vos problèmes et répondre à vos questions. Notre équipe est là pour vous aider à tirer le meilleur parti de nos outils.",
     },
   ];
 
@@ -105,8 +115,8 @@ export default function Contact() {
             <div className="input-container">
               <input
                 type="text"
-                name="firstName"
-                value={formData.firstName}
+                name="firstname"
+                value={formData.firstname}
                 onChange={handleInputChange}
                 required
               />
@@ -152,8 +162,8 @@ export default function Contact() {
 
           <div className="input-container text-area">
             <textarea
-              name="description"
-              value={formData.description}
+              name="message"
+              value={formData.message}
               onChange={handleInputChange}
               required
             />

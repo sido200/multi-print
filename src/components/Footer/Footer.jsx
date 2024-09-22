@@ -4,14 +4,16 @@ import { FiLinkedin, FiInstagram, FiFacebook } from "react-icons/fi";
 import Image from "next/image";
 import whiteLogo from "../../app/[locale]/assets/whiteLogo.png";
 import { Outfit } from "next/font/google";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { useState } from "react";
 import Swal from "sweetalert2";
 import { createNewsletter } from "@/app/services/newsletter";
+import Link from "next/link";
 
 const outfit = Outfit({ subsets: ["latin"] });
 export default function Footer() {
   const t = useTranslations("HomePage");
+  const localActive = useLocale();
 
   // State to toggle email input visibility
   const [showEmailInput, setShowEmailInput] = useState(false);
@@ -85,6 +87,7 @@ export default function Footer() {
                 left: showEmailInput ? "16vw" : "0",
                 transition: "all 0.5s ease-in-out",
                 cursor: "pointer",
+                right: "16vw",
               }}
             >
               Submit
@@ -96,10 +99,18 @@ export default function Footer() {
             <li className="title-liste">
               {t("footer.top-footer.links.explore")}
             </li>
-            <li>{t("home")}</li>
-            <li>{t("about")}</li>
-            <li>{t("products")}</li>
-            <li>{t("contact")}</li>
+            <Link href="/#hero-section">
+              <li>{t("home")}</li>
+            </Link>
+            <Link href="/#about-section">
+              <li>{t("about")}</li>
+            </Link>{" "}
+            <Link href={`/${localActive}/Product`}>
+              <li>{t("products")}</li>
+            </Link>{" "}
+            <Link href={`/${localActive}/Contact`}>
+              <li>{t("contact")}</li>
+            </Link>{" "}
           </ul>
           <ul>
             <li className="title-liste">
