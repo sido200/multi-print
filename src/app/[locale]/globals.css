@@ -12,6 +12,7 @@ body {
   overflow-x: hidden;
   scroll-behavior: smooth;
   font-family: "__Outfit_cfacd3";
+  /* background-color: rgba(244, 244, 255, 0.47); */
 }
 
 .rtl {
