@@ -11,12 +11,7 @@ export default function CardProduct({ product }) {
     <Link href={`/${localActive}/DetailsProduct/${product?._id}`}>
       <div className="card-product">
         <div className="img">
-          <img
-            src={product?.images[0]}
-            alt="product"
-            width={200}
-            height={200}
-          />
+          <img src={product?.images[0]} alt="product" />
         </div>
         <h3>{product?.titlefr}</h3>
         <h4>Type</h4>

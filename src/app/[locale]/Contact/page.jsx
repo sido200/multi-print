@@ -6,6 +6,7 @@ import { FiUser, FiPhone } from "react-icons/fi";
 import { FaRegFileAlt } from "react-icons/fa";
 import { MdAlternateEmail } from "react-icons/md";
 import { createContact } from "@/app/services/contact";
+import Swal from "sweetalert2";
 
 export default function Contact() {
   const [clickedQuestions, setClickedQuestions] = useState([0]);
@@ -38,13 +39,24 @@ export default function Contact() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(formData);
-    // Submit the formData to an API or do further processing
-
-    createContact(formData);
-
-    // Reset form data after submission
-    setFormData(initialFormData);
+    try {
+      createContact(formData);
+      setFormData(initialFormData);
+      Swal.fire({
+        position: "top-end",
+        icon: "success",
+        title: "Your Email has been saved",
+        showConfirmButton: false,
+        timer: 1500,
+      });
+    } catch (error) {
+      console.error(error);
+      Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "Something went wrong!",
+      });
+    }
   };
 
   const qst = [

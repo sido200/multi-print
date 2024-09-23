@@ -72,19 +72,16 @@ export default function NavBar() {
           />
         </div>
       </div>
-      <div
-        className="language"
-        onClick={() => {
-          setIsLanguage(!isLanguage);
-        }}
-        style={{ cursor: "pointer !important" }}
-      >
+      <div className="language">
         <span>{localActive}</span>
         <Image
           src={localActive === "en" ? en : localActive === "fr" ? fr : ar}
           alt="Flag"
           width={24}
           height={24}
+          onClick={() => {
+            setIsLanguage(!isLanguage);
+          }}
         />
         <div className="menu">
           <RiMenu3Fill color="white" size={23} />

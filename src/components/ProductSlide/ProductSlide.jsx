@@ -27,6 +27,10 @@ export default function ProductSlide() {
   return (
     <>
       <Swiper
+        autoplay={{
+          delay: 3000,
+          disableOnInteraction: false,
+        }}
         spaceBetween={20}
         pagination={{
           clickable: true,
