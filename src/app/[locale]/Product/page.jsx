@@ -6,15 +6,30 @@ import "./Product.css";
 import Filter from "@/components/Filter/Filter";
 import { useTranslations } from "next-intl";
 import { getProducts } from "@/app/services/products";
+import { getCategorie } from "@/app/services/categories";
 
 export default function Product() {
   const [products, setProducts] = useState([]);
-
+  const [categories, setCategories] = useState([]);
+  //function
+  const fatchProducts=(category)=>{
+    getProducts(category)
+    .then((res) => {
+      console.log(res.data.products);
+      setProducts(res.data.products);
+    })
+    .catch((err) => {
+      console.error(err);
+    });
+  }
+//fatch
   useEffect(() => {
-    getProducts()
+    fatchProducts()
+  }, []);
+  useEffect(() => {
+    getCategorie()
       .then((res) => {
-        console.log(res.data.products);
-        setProducts(res.data.products);
+        setCategories(res.data.categories);
       })
       .catch((err) => {
         console.error(err);
@@ -28,7 +43,7 @@ export default function Product() {
           <h2>{t("title")}</h2>
           <p>{t("description")}</p>
         </div>
-        <Filter />
+        <Filter categories={categories} fatchProducts={fatchProducts} />
       </div>
       <div className="grid-product">
         {products.map((product) => (

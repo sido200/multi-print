@@ -51,3 +51,7 @@ font-weight: 500;
     justify-content: center;
     flex-direction: column;
   }
+  .filtres{
+    display: flex;
+    gap: 10px;
+  }

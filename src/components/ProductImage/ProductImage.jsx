@@ -7,6 +7,7 @@ import Image from "next/image";
 export default function ProductImage({ Product }) {
   const [position, setPosition] = useState({ x: 0, y: 0 });
   const [isHovered, setIsHovered] = useState(false);
+  const [index, setIndex] = useState(0);
   console.log(Product);
 
   const handleMouseMove = (e) => {
@@ -30,7 +31,7 @@ export default function ProductImage({ Product }) {
         onMouseLeave={handleMouseLeave}
       >
         <img
-          src={Product?.images[0]}
+          src={Product?.images[index]}
           alt="details"
           className={`zoom-image ${isHovered ? "hovered" : ""}`}
           style={{
@@ -40,27 +41,18 @@ export default function ProductImage({ Product }) {
         />
       </div>
       <div className="small-image">
-        <img
-          src={Product?.images[0]}
-          alt="details"
-          style={{
-            objectFit: "cover",
-          }}
-        />
-        <img
-          src={Product?.images[0]}
-          alt="details"
-          style={{
-            objectFit: "cover",
-          }}
-        />
-        <img
-          src={Product?.images[0]}
-          alt="details"
-          style={{
-            objectFit: "cover",
-          }}
-        />
+       
+       {Product?.images.map((image,index)=>(
+         <img
+         onClick={()=>setIndex(index)}
+         key={index}
+         src={image}
+         alt="details"
+         style={{
+           objectFit: "cover",
+         }}
+       />
+       ))}
       </div>
     </div>
   );
