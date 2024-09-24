@@ -153,18 +153,26 @@
   .top-footer {
     flex-direction: column;
   }
-  .right-footer,
+
   .left-footer {
     flex-direction: column;
     width: 100%;
     align-items: center;
+    position: relative;
+  }
+
+  .right-footer {
+    width: 100%;
   }
   .footer {
-    height: 800px;
+    height: 700px;
     padding: 50px 50px 70px 50px;
   }
+
   .top-footer {
     gap: 50px;
+    height: 443px;
+    justify-content: space-between;
   }
   .top-footer .logo {
     display: none;
@@ -185,6 +193,7 @@
     font-size: 20px;
     font-weight: 500;
     margin-top: 20px;
+    z-index: 42;
   }
   .right-footer {
     gap: 40px;
@@ -202,6 +211,10 @@
   .social svg {
     height: 20px;
     width: 20px;
+  }
+  .newsletter-form {
+    position: absolute !important;
+    top: 50px;
   }
   .left-footer .newsletter-form input {
     width: 90% !important;
