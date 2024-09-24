@@ -9,94 +9,66 @@ import Image from "next/image";
 import { Outfit } from "next/font/google";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
+import { getpub } from "@/app/services/pub";
+import { useEffect, useState } from "react";
 
 const outfit = Outfit({ subsets: ["latin"] });
 
 export default function Slider() {
-  const t = useTranslations('HomePage');
+  const [pub, setpub] = useState([]);
+  useEffect(() => {
+    getpub()
+      .then((res) => {
+        setpub(res.data.pubs);
+      })
+      .catch((err) => {
+        console.error(err);
+      });
+  }, []);
+  const t = useTranslations("HomePage");
   return (
-    <Swiper
-      className="mySwiper"
-      autoplay={{
-        delay: 3000,
-        disableOnInteraction: false,
-      }}
-      modules={[Autoplay]}
-      onSwiper={(swiper) => {
-        const slides = document.querySelectorAll('.swiper-slide');
-        
-        slides.forEach((slide) => {
-          slide.addEventListener('mouseenter', () => {
-            swiper?.autoplay?.stop();
+    <>
+      <Swiper
+        className="mySwiper"
+        autoplay={{
+          delay: 3000,
+          disableOnInteraction: false,
+        }}
+        modules={[Autoplay]}
+        onSwiper={(swiper) => {
+          const slides = document.querySelectorAll(".swiper-slide");
+
+          slides.forEach((slide) => {
+            slide.addEventListener("mouseenter", () => {
+              swiper?.autoplay?.stop();
+            });
+            slide.addEventListener("mouseleave", () => {
+              swiper?.autoplay?.start();
+            });
           });
-          slide.addEventListener('mouseleave', () => {
-            swiper?.autoplay?.start();
-          });
-        });
-      }}
-    >
-      <SwiperSlide>
-        <div
-          className="left-slide"
-          style={{ backgroundSize: "cover", backgroundPosition: "center" }}
-        >
-          <h2>{t('products-title')}</h2>
-          <p>
-          {t('products-details')}
-          </p>
-          <Link href="/Product">
-            <button className={outfit.className}>
-              <span>  {t('explore-btn')}</span>
-              <FaArrowRight />
-            </button>
-          </Link>
-        </div>
-        <div className="right-slide">
-          <Image src={produit} alt="produit" />
-        </div>
-      </SwiperSlide>
-      <SwiperSlide>
-        <div
-          className="left-slide"
-          style={{ backgroundSize: "cover", backgroundPosition: "center" }}
-        >
-          <h2>{t('products-title')}</h2>
-          <p>
-          {t('products-details')}
-          </p>
-          <Link href="/Product">
-            <button className={outfit.className}>
-              <span>  {t('explore-btn')}</span>
-              <FaArrowRight />
-            </button>
-          </Link>
-        </div>
-        <div className="right-slide">
-          <Image src={produit} alt="produit" />
-        </div>
-      </SwiperSlide>
-      <SwiperSlide>
-        <div
-          className="left-slide"
-          style={{ backgroundSize: "cover", backgroundPosition: "center" }}
-        >
-          <h2>{t('products-title')}</h2>
-          <p>
-          {t('products-details')}
-          </p>
-          <Link href="/Product">
-            <button className={outfit.className}>
-              <span>  {t('explore-btn')}</span>
-              <FaArrowRight />
-            </button>
-          </Link>
-        </div>
-        <div className="right-slide">
-          <Image src={produit} alt="produit" />
-        </div>
-      </SwiperSlide>
-     
-      
-    </Swiper>
+        }}
+      >
+        {pub.map((pub) => (
+          <SwiperSlide>
+            <div
+              className={`left-slide ${pub.color}tt`}
+              style={{ backgroundSize: "cover", backgroundPosition: "center" }}
+            >
+              <h2>{pub.titlefr}</h2>
+              <p>{pub.descriptionfr}</p>
+              <Link href="/fr/Product">
+                <button className={outfit.className}>
+                  <span> {t("explore-btn")}</span>
+                  <FaArrowRight />
+                </button>
+              </Link>
+            </div>
+            <div className={`right-slide ${pub.color}`}>
+              <img src={pub.image} alt="produit" />
+            </div>
+          </SwiperSlide>
+        ))}
+      </Swiper>
+    </>
   );
 }
