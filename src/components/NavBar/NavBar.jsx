@@ -86,7 +86,7 @@ export default function NavBar() {
         
         />
       </div>
-        <div className="menu">
+        <div className="menu" onClick={()=>setIsOpen(!isOpen)}>
           <RiMenu3Fill color="white" size={23} />
         </div>
         <div

@@ -34,6 +34,17 @@
   align-items: center;
   justify-content: center;
 }
+.filter2 {
+  background-color:  rgba(255, 168, 0, 1);
+  color: white !important;
+  height: 75px;
+  width: 94px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .filter svg {
 
   height: 35px;
@@ -78,6 +89,12 @@
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+  .filter2 {
+   
+    height: 55px;
+    width: 74px;
+  
   }
   .filter svg {
   
