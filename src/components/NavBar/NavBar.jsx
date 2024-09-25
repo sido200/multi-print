@@ -43,23 +43,29 @@ export default function NavBar() {
       </div>
       <div className={isOpen ? "items active" : "items"}>
         <ul>
-          <Link href="/#hero-section">
+          <Link href="/#hero-section" onClick={() => setIsOpen(false)}>
             <li>{t("home")}</li>
           </Link>
           <hr />
-          <Link href="/#about-section">
+          <Link href="/#about-section" onClick={() => setIsOpen(false)}>
             <li>{t("about")}</li>
           </Link>
           <hr />
-          <Link href={`/${localActive}/Product`}>
+          <Link
+            href={`/${localActive}/Product`}
+            onClick={() => setIsOpen(false)}
+          >
             <li>{t("products")}</li>
           </Link>
           <hr />
-          <Link href={`/${localActive}/Contact`}>
+          <Link
+            href={`/${localActive}/Contact`}
+            onClick={() => setIsOpen(false)}
+          >
             <li>{t("contact")}</li>
           </Link>
           <hr />
-          <Link href="/#Testimonial-section">
+          <Link href="/#Testimonial-section" onClick={() => setIsOpen(false)}>
             <li>{t("Testimonials")}</li>
           </Link>
         </ul>
@@ -73,20 +79,22 @@ export default function NavBar() {
         </div>
       </div>
       <div className="language">
-
-      <div className="language"   onClick={() => {
+        <div
+          className="language"
+          onClick={() => {
             setIsLanguage(!isLanguage);
-          }} style={{cursor:'pointer'}}>
-      <span>{localActive}</span>
-        <Image
-          src={localActive === "en" ? en : localActive === "fr" ? fr : ar}
-          alt="Flag"
-          width={24}
-          height={24}
-        
-        />
-      </div>
-        <div className="menu" onClick={()=>setIsOpen(!isOpen)}>
+          }}
+          style={{ cursor: "pointer" }}
+        >
+          <span>{localActive}</span>
+          <Image
+            src={localActive === "en" ? en : localActive === "fr" ? fr : ar}
+            alt="Flag"
+            width={24}
+            height={24}
+          />
+        </div>
+        <div className="menu" onClick={() => setIsOpen(!isOpen)}>
           <RiMenu3Fill color="white" size={23} />
         </div>
         <div

@@ -147,6 +147,26 @@ body:has(.open-side) img {
   font-weight: 500;
   padding: 10px 20px;
   cursor: pointer;
+  border: 1px solid rgba(248, 155, 49, 1);
+}
+.button button a {
+  color: white;
+}
+.button button:first-child:hover a {
+  color: rgba(248, 155, 49, 1);
+  transition: 0.5s;
+}
+.button button:first-child:hover {
+  background-color: white;
+  border: none;
+  color: rgba(248, 155, 49, 1);
+  font-size: 1.5rem;
+  font-weight: 500;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: 0.5s;
+  box-sizing: border-box;
+  border: 1px solid rgba(248, 155, 49, 1);
 }
 .jaune {
   color: rgba(248, 155, 49, 1);
@@ -159,6 +179,26 @@ body:has(.open-side) img {
   font-weight: 500;
   padding: 10px 20px;
   cursor: pointer;
+}
+.button button:last-child a {
+  background-color: white;
+  border: none;
+  color: black;
+  font-size: 1.5rem;
+  font-weight: 500;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+.button button:last-child:hover a {
+  background-color: rgba(248, 155, 49, 1);
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 500;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: 0.5s;
+  box-sizing: border-box;
 }
 /*product*/
 #product-section {
@@ -253,6 +293,18 @@ body:has(.open-side) img {
 #contact-section .button button:last-child {
   background-color: transparent;
   border: 2px solid white;
+  color: white;
+  padding: 9px 19px;
+}
+#contact-section .button button:last-child:hover {
+  background-color: rgba(248, 155, 49, 1);
+  border: 2px solid rgba(248, 155, 49, 1);
+  color: white;
+  transition: 0.5s;
+}
+#contact-section .button button:last-child a {
+  background-color: transparent;
+  /* border: 2px solid white; */
   color: white;
 }
 /*Testimonial*/
@@ -446,8 +498,46 @@ body:has(.open-side) img {
   }
 }
 @media screen and (max-width: 480px) {
+  .button button:last-child a {
+    background-color: transparent;
+    border: none;
+    font-size: 1.2rem;
+    font-weight: 500;
+    padding: 0;
+    cursor: pointer;
+    transition: 0.5s;
+  }
+  .button button:last-child:hover a {
+    background-color: transparent;
+    color: black;
+    border: none;
+    font-size: 1.2rem;
+    font-weight: 500;
+    padding: 0;
+    cursor: pointer;
+    transition: 0.5s;
+  }
 }
-@media screen and (max-width: 414px) {
+@media screen and (max-width: 1316px) {
+  .button button:last-child:hover a {
+    background-color: transparent;
+    color: black;
+    border: none;
+    font-size: 1.5rem;
+    font-weight: 500;
+    padding: 0;
+    cursor: pointer;
+    transition: 0.5s;
+  }
+  .button button:last-child a {
+    background-color: transparent;
+    border: none;
+    font-size: 1.2rem;
+    font-weight: 500;
+    padding: 0;
+    cursor: pointer;
+    transition: 0.5s;
+  }
 }
 @media screen and (max-width: 385px) {
 }

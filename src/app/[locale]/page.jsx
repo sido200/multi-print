@@ -7,10 +7,12 @@ import contactImage2 from "./assets/contact-image2.jpg";
 
 import ProductSlide from "@/components/ProductSlide/ProductSlide";
 import TestimonialSlider from "@/components/TestimonialSlider/TestimonialSlider";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
+import Link from "next/link";
 
 export default function LandingPage() {
   const t = useTranslations("HomePage");
+  const localActive = useLocale();
 
   return (
     <main className="landing-page">
@@ -32,6 +34,7 @@ export default function LandingPage() {
           <div className="stat">
             <div className="stat-1">
               <h3>+20</h3>
+
               <p> {t("about-section.stats.label1")}</p>
             </div>
             <div className="stat-1">
@@ -40,8 +43,16 @@ export default function LandingPage() {
             </div>
           </div>
           <div className="button">
-            <button> {t("about-section.buttons.contact")}</button>
-            <button> {t("about-section.buttons.book")} </button>
+            <button>
+              <Link href={`/${localActive}/Contact`}>
+                {t("about-section.buttons.contact")}
+              </Link>
+            </button>
+            <button>
+              <Link href={`/${localActive}/Contact`}>
+                {t("about-section.buttons.book")}
+              </Link>
+            </button>
           </div>
         </div>
         <div className="right-about">
@@ -71,8 +82,16 @@ export default function LandingPage() {
         <h2> {t("contact-section.title")}</h2>
         <p>{t("contact-section.description")}</p>
         <div className="button">
-          <button>{t("contact-section.buttons.contact")}</button>
-          <button>{t("contact-section.buttons.book")}</button>
+          <button>
+            <Link href={`/${localActive}/Contact`}>
+              {t("contact-section.buttons.contact")}
+            </Link>
+          </button>
+          <button>
+            <Link href={`/${localActive}/Contact`}>
+              {t("contact-section.buttons.book")}
+            </Link>
+          </button>
         </div>
       </section>
       <section id="Testimonial-section">

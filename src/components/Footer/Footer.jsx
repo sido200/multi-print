@@ -75,6 +75,7 @@ export default function Footer() {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
+              id="email-input"
               style={{
                 width: showEmailInput ? "22vw" : "10%",
                 transition: "all 0.5s ease-in-out",
@@ -82,6 +83,7 @@ export default function Footer() {
             />
             <button
               type="submit"
+              id="submit-button"
               className="submit-button"
               style={{
                 left: showEmailInput ? "16vw" : "0",
@@ -123,9 +125,15 @@ export default function Footer() {
       </div>
       <div className="bottom-footer">
         <div className="social">
-          <FiInstagram color="white" size={32} />
-          <FiLinkedin color="white" size={32} />
-          <FiFacebook color="white" size={32} />
+          <a href="https://instagram.com" target="_blank">
+            <FiInstagram color="white" size={32} />
+          </a>
+          <a href="https://linkedin.com" target="_blank">
+            <FiLinkedin color="white" size={32} />
+          </a>
+          <a href="https://facebook.com" target="_blank">
+            <FiFacebook color="white" size={32} />
+          </a>
         </div>
         <p>{t("footer.copyright")}</p>
       </div>

@@ -12,19 +12,19 @@ export default function Product() {
   const [products, setProducts] = useState([]);
   const [categories, setCategories] = useState([]);
   //function
-  const fatchProducts=(category)=>{
+  const fatchProducts = (category) => {
     getProducts(category)
-    .then((res) => {
-      console.log(res.data.products);
-      setProducts(res.data.products);
-    })
-    .catch((err) => {
-      console.error(err);
-    });
-  }
-//fatch
+      .then((res) => {
+        console.log(res.data.products);
+        setProducts(res.data.products);
+      })
+      .catch((err) => {
+        console.error(err);
+      });
+  };
+  //fatch
   useEffect(() => {
-    fatchProducts()
+    fatchProducts();
   }, []);
   useEffect(() => {
     getCategorie()
@@ -49,6 +49,18 @@ export default function Product() {
         {products.map((product) => (
           <CardProduct key={product.id} product={product} />
         ))}
+        {products.length === 0 && (
+          <h2
+            style={{
+              textAlign: "center",
+              padding: "15px",
+              borderRadius: "10px",
+              border: "1px solid #d7c4c4",
+            }}
+          >
+            No products found
+          </h2>
+        )}
       </div>
     </main>
   );
