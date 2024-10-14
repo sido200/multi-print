@@ -42,6 +42,9 @@
 .bleutt {
   background-image: url("../../app/[locale]/assets/frame3.png");
 }
+.greentt {
+  background-image: url("../../app/[locale]/assets/frame4.png");
+}
 .yellow {
   background-color: #fef6d9;
 }
@@ -50,6 +53,9 @@
 }
 .bleu {
   background-color: #e5f3ff;
+}
+.green {
+  background-color: #d5fdd2;
 }
 .right-slide {
   height: 674px;

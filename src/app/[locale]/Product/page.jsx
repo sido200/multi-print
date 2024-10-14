@@ -22,7 +22,7 @@ export default function Product() {
         console.error(err);
       });
   };
-  //fatch
+  //fetch
   useEffect(() => {
     fatchProducts();
   }, []);
