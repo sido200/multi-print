@@ -110,14 +110,15 @@ border-radius: 16px;
     font-weight: 600;
     text-align: justify;
   }
-
-}
-@media screen and (max-width: 820px) {
   .rate-card>p{
     font-size: 0.8rem;
     font-weight: 600;
     text-align: justify;
   }
+
+}
+@media screen and (max-width: 820px) {
+ 
 }
 @media screen and (max-width: 750px) {
 

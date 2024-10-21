@@ -77,5 +77,27 @@
     "description": "Introducing our latest Print marvel - Pushing boundaries and redefining print excellence",
     "see-more": "See more",
     "contact": "Contact Team"
+  },
+  "Contact-page": {
+    "title": "Do you still have questions?",
+    "description": "Can’t find the answer you’re looking for? Contact us!",
+    "name": "Name",
+    "first-name": "First Name",
+    "email": "Email",
+    "phone":"Phone number",
+    "describ": "Description",
+    "send": "Send",
+    "qst1": "All the options of the Basic Plan",
+    "rep1": "A secure online booking system and an intuitive dashboard to manage your bookings. Customize your profile with photos and descriptions, and receive email notifications for every new booking.",
+    "qst2": "Visibility on social media",
+    "rep2": "Benefit from promotion on our social media accounts to increase your visibility and reach a wider audience. Take advantage of our online presence to attract more potential customers.",
+    "qst3": "Advanced booking system",
+    "rep3": "Access additional booking features, such as customizing booking options and managing payments. Provide a smooth and professional booking experience for your customers.",
+    "qst4": "Enhanced dashboard",
+    "rep4": "Use advanced management tools for deeper analysis of your performance. Get detailed reports, track booking trends, and optimize your daily operations.",
+    "qst5": "Standard customer support",
+    "rep5": "Benefit from email and phone support to quickly resolve your issues and answer your questions. Our team is here to help you make the most of our tools.",
+    "qst-title": "Frequently Asked Questions",
+    "qst-desc": "Questions you might ask about our products and services."
   }
 }

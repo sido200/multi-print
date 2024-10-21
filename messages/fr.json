@@ -78,6 +78,31 @@
     "description": "Présentation de notre dernière merveille d'impression - repousser les limites et redéfinir l'excellence en matière d'impression",
       "see-more":"Voir plus",
     "contact": "Contactez l'equipe"
+  },
+  "Contact-page": {
+    "title": "Vous avez encore des questions ?",
+    "description": "Vous ne trouvez pas la réponse que vous cherchez ? Contactez-nous !",
+    "name":"Nom",
+    "first-name":"Prenom",
+    "email":"email",
+    "phone":"Numero de telphone",
+    "describ":"description",
+    "send":"Envoyer",
+    "qst1":"Toutes les options du Plan Basique",
+    "rep1":"un système de réservation en ligne sécurisé, et un tableau de bord intuitif pour gérer vos réservations. Personnalisez votre profil avec des photos et descriptions, et recevez des notifications par e-mail pour chaque nouvelle réservation",
+    "qst2":"Visibilité sur les réseaux sociaux",
+    "rep2":"Bénéficiez d'une promotion sur nos comptes de réseaux sociaux pour augmenter votre visibilité et atteindre un public plus large. Profitez de notre présence en ligne pour attirer plus de clients potentiels.",
+    "qst3":"Système de réservation avancé",
+    "rep3":"Accédez à des fonctionnalités de réservation supplémentaires, telles que la personnalisation des options de réservation et la gestion des paiements. Offrez une expérience de réservation fluide et professionnelle à vos clients.",
+    "qst4":"Tableau de bord amélioré",
+    "rep4":"Utilisez des outils de gestion avancés pour une analyse plus approfondie de vos performances. Obtenez des rapports détaillés, suivez les tendances de réservation et optimisez vos opérations quotidiennes.",
+    "qst5":"Support client standard",
+    "rep5":"Bénéficiez d'une assistance par e-mail et téléphone pour résoudre rapidement vos problèmes et répondre à vos questions. Notre équipe est là pour vous aider à tirer le meilleur parti de nos outils.",
+    "qst-title":"Questions fréquemment posées",
+    "qst-desc":"Question you might ask about our products and services."
+
+     
+   
   }
   
 }

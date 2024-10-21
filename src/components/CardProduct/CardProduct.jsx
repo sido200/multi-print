@@ -13,7 +13,9 @@ export default function CardProduct({ product }) {
         <div className="img">
           <img src={product?.images[0]} alt="product" />
         </div>
-        <h3>{product?.titlefr}</h3>
+
+        <h3>{product[`title${localActive}`]}</h3>
+
         <h4>Type</h4>
       </div>
     </Link>

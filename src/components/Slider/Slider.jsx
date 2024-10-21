@@ -8,13 +8,14 @@ import "./Slider.css";
 import Image from "next/image";
 import { Outfit } from "next/font/google";
 import Link from "next/link";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { getpub } from "@/app/services/pub";
 import { useEffect, useState } from "react";
 
 const outfit = Outfit({ subsets: ["latin"] });
 
 export default function Slider() {
+  const localActive = useLocale();
   const [pub, setpub] = useState([]);
   useEffect(() => {
     getpub()
@@ -54,8 +55,8 @@ export default function Slider() {
               className={`left-slide ${pub.color}tt`}
               style={{ backgroundSize: "cover", backgroundPosition: "center" }}
             >
-              <h2>{pub.titlefr}</h2>
-              <p>{pub.descriptionfr}</p>
+              <h2>{pub[`title${localActive}`]}</h2>
+              <p> {pub[`description${localActive}`]}</p>
               <Link href="/fr/Product">
                 <button className={outfit.className}>
                   <span> {t("explore-btn")}</span>

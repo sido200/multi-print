@@ -157,9 +157,10 @@
   }
 
   .left-slide button {
-    width: 60%;
+    width: 100%;
     font-size: 15px;
     height: 40px;
+    padding: 5px;
   }
   .left-slide h2 {
     font-size: 2.2rem;

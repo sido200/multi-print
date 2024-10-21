@@ -10,7 +10,7 @@ import { useState, useTransition, useEffect } from "react";
 import { IoClose } from "react-icons/io5";
 import Link from "next/link";
 import { useLocale, useTranslations } from "next-intl";
-import { useRouter } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 
 export default function NavBar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -20,6 +20,7 @@ export default function NavBar() {
   const t = useTranslations("HomePage");
   const [isPending, startTransition] = useTransition();
   const router = useRouter();
+  const pathname = usePathname();
 
   useEffect(() => {
     if (Language == "ar") {
@@ -29,7 +30,7 @@ export default function NavBar() {
     }
     if (isLanguage) {
       startTransition(() => {
-        router.replace(`/${Language}`);
+        router.replace(`/${Language}${pathname.replace(/^\/[a-z]{2}(?=\/|$)/, "")}`);
       });
     }
   }, [isLanguage, Language, router]);
