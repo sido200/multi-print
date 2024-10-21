@@ -19,7 +19,11 @@ body {
   direction: rtl;
 }
 .rtl #product-section {
-  padding: 20px 150px !important;
+  /* padding: 20px 150px !important; */
+  padding-left: 0 !important;
+}
+.rtl #product-section .text {
+  margin-right: 150px !important;
 }
 .rtl .swiper {
   direction: ltr;
@@ -326,7 +330,6 @@ body:has(.open-side) img {
   #hero-section,
   #data-section,
   #about-section,
-  #product-section,
   #vision-section {
     padding: 20px 120px;
   }
@@ -492,7 +495,6 @@ body:has(.open-side) img {
   #hero-section,
   #data-section,
   #about-section,
-  #product-section,
   #vision-section {
     padding: 20px 40px;
   }
