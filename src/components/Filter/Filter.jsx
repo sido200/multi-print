@@ -13,10 +13,18 @@ export default function Filter({ categories, fatchProducts }) {
   return (
     <>
       <div className="filtres">
-        <div className="filter2" onClick={() => fatchProducts()}>
+        <div
+          style={{ cursor: "pointer" }}
+          className="filter2"
+          onClick={() => fatchProducts()}
+        >
           <h3>clear</h3>
         </div>
-        <div className="filter" onClick={() => setFilter(!filter)}>
+        <div
+          style={{ cursor: "pointer" }}
+          className="filter"
+          onClick={() => setFilter(!filter)}
+        >
           <FiFilter />
         </div>
       </div>
