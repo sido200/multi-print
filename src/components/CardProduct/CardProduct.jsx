@@ -6,7 +6,6 @@ import { useLocale } from "next-intl";
 
 export default function CardProduct({ product }) {
   const localActive = useLocale();
-
   return (
     <Link href={`/${localActive}/DetailsProduct/${product?._id}`}>
       <div className="card-product">
@@ -16,7 +15,7 @@ export default function CardProduct({ product }) {
 
         <h3>{product[`title${localActive}`]}</h3>
 
-        <h4>Type</h4>
+        <h4>{product.category[`title${localActive}`]}</h4>
       </div>
     </Link>
   );
