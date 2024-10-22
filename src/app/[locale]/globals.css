@@ -271,7 +271,9 @@ body:has(.open-side) img {
   color: gray;
 }
 #contact-section {
-  background-image: url("./assets/contact-bg.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.389), rgba(0, 0, 0, 0.384)),
+    url("./assets/contact-bg.jpg");
+
   height: 580px;
   background-size: cover;
   background-position: "center";
