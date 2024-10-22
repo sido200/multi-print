@@ -43,7 +43,7 @@ export default function TestimonialSlider() {
         <SwiperSlide>
           <div className="rate-card">
             <div className="user-profil">
-              <Image src={profil} alt profil />
+              <Image src={profil} alt="profil" />
               <div className="user-info">
                 <p className="user-name">John Doe</p>
                 <p className="date">2023/10/9</p>
@@ -67,7 +67,7 @@ export default function TestimonialSlider() {
         <SwiperSlide>
           <div className="rate-card">
             <div className="user-profil">
-              <Image src={profil} alt profil />
+              <Image src={profil} alt="profil" />
               <div className="user-info">
                 <p className="user-name">John Doe</p>
                 <p className="date">2023/10/9</p>
@@ -91,7 +91,7 @@ export default function TestimonialSlider() {
         <SwiperSlide>
           <div className="rate-card">
             <div className="user-profil">
-              <Image src={profil} alt profil />
+              <Image src={profil} alt="profil" />
               <div className="user-info">
                 <p className="user-name">John Doe</p>
                 <p className="date">2023/10/9</p>
@@ -115,7 +115,7 @@ export default function TestimonialSlider() {
         <SwiperSlide>
           <div className="rate-card">
             <div className="user-profil">
-              <Image src={profil} alt profil />
+              <Image src={profil} alt="profil" />
               <div className="user-info">
                 <p className="user-name">John Doe</p>
                 <p className="date">2023/10/9</p>

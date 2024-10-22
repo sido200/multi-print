@@ -50,13 +50,22 @@
   text-align: center;
   font-size: 1.5rem;
 }
+.items-filter li:hover {
+  text-decoration: underline;
+}
 .items-filter {
   display: flex;
-  align-items: center;
+  align-items: start;
   justify-content: center;
   flex-direction: column;
+padding: 0 20px;
 }
 .filtres {
   display: flex;
   gap: 10px;
+  align-items: center;
+}
+.selected-categories{
+  font-weight: 500;
+ 
 }

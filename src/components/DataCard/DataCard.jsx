@@ -1,16 +1,12 @@
 import Image from "next/image";
-import icon1 from "../../app/[locale]/assets/icon1.png";
-import icon2 from "../../app/[locale]/assets/icon2.png";
-import icon3 from "../../app/[locale]/assets/icon3.png";
-
 import "./DataCard.css";
 import { useTranslations } from "next-intl";
-export default function DataCard() {
+export default function DataCard({ icon }) {
   const t = useTranslations("HomePage");
   return (
     <div className="data-card">
       <div className="icon">
-        <img src={icon1} alt="" />
+        <Image src={icon} alt="icon" />
       </div>
       <h3>{t("data-title-title")}</h3>
       <p>{t("Card-data-desc")}</p>

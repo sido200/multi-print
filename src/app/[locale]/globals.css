@@ -65,13 +65,13 @@ body:has(.open-side) img {
 }
 
 #hero-section {
-  padding: 20px 150px;
+  padding: 40px 150px;
 }
 
 #data-section {
   display: flex;
   flex-direction: column;
-  padding: 20px 150px;
+  padding: 40px 150px;
   gap: 30px;
 }
 #data-section h2 {
@@ -86,7 +86,7 @@ body:has(.open-side) img {
   gap: 25px;
 }
 #about-section {
-  padding: 20px 150px;
+  padding: 40px 150px;
   display: flex;
   width: 100%;
   align-items: center;
@@ -208,7 +208,7 @@ body:has(.open-side) img {
 #product-section {
   display: flex;
   flex-direction: column;
-  padding: 20px 0px;
+  padding: 40px 0px;
   padding-right: 0%;
   gap: 30px;
 }
@@ -233,7 +233,7 @@ body:has(.open-side) img {
 /*conatct*/
 #vision-section {
   display: flex;
-  padding: 20px 150px;
+  padding: 40px 150px;
   gap: 70px;
 }
 .left-vision {
@@ -280,6 +280,7 @@ body:has(.open-side) img {
   align-items: center;
   justify-content: center;
   gap: 15px;
+  margin: 40px 0px;
 }
 #contact-section h2 {
   font-size: 4rem;
@@ -333,9 +334,7 @@ body:has(.open-side) img {
   #vision-section {
     padding: 20px 120px;
   }
-  #product-section {
-    padding-right: 0%;
-  }
+ 
   .grid-card {
     display: flex;
     flex-wrap: wrap;
@@ -404,9 +403,7 @@ body:has(.open-side) img {
   #vision-section {
     padding: 20px 40px;
   }
-  #product-section {
-    padding-right: 0%;
-  }
+ 
 
   #data-section h2 {
     font-size: 2.8rem;

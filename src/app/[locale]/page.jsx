@@ -4,7 +4,9 @@ import DataCard from "@/components/DataCard/DataCard";
 import Image from "next/image";
 import contactImage from "./assets/contact-image.jpg";
 import contactImage2 from "./assets/contact-image2.jpg";
-
+import icon1 from "../../app/[locale]/assets/icon1.png";
+import icon2 from "../../app/[locale]/assets/icon2.png";
+import icon3 from "../../app/[locale]/assets/icon3.png";
 import ProductSlide from "@/components/ProductSlide/ProductSlide";
 import TestimonialSlider from "@/components/TestimonialSlider/TestimonialSlider";
 import { useLocale, useTranslations } from "next-intl";
@@ -22,9 +24,9 @@ export default function LandingPage() {
       <section id="data-section">
         <h2>{t("data-title")}</h2>
         <div className="grid-card">
-          <DataCard />
-          <DataCard />
-          <DataCard />
+          <DataCard icon={icon1}/>
+          <DataCard icon={icon2}/>
+          <DataCard  icon={icon3}/>
         </div>
       </section>
       <section id="about-section">

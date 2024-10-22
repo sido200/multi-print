@@ -49,8 +49,8 @@ export default function Slider() {
           });
         }}
       >
-        {pub.map((pub) => (
-          <SwiperSlide>
+        {pub.map((pub,index) => (
+          <SwiperSlide key={index}>
             <div
               className={`left-slide ${pub.color}tt`}
               style={{ backgroundSize: "cover", backgroundPosition: "center" }}

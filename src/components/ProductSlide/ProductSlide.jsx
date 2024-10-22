@@ -53,8 +53,8 @@ export default function ProductSlide() {
         }}
         className="mySwiper"
       >
-        {products.map((product) => (
-          <SwiperSlide key={product.id}>
+        {products.map((product,index) => (
+          <SwiperSlide key={index}>
             <CardProduct product={product} />
           </SwiperSlide>
         ))}

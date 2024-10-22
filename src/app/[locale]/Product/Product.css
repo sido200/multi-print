@@ -38,11 +38,12 @@
   background-color:  rgba(255, 168, 0, 1);
   color: white !important;
   height: 75px;
-  width: 94px;
+ padding: 0 10px;
   border-radius: 8px;
   display: flex;
   align-items: center;
   justify-content: center;
+  text-align: center;
 }
 
 .filter svg {
@@ -93,7 +94,7 @@
   .filter2 {
    
     height: 55px;
-    width: 74px;
+   
   
   }
   .filter svg {
