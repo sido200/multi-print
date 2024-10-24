@@ -19,7 +19,7 @@ export default function Footer() {
   // State to toggle email input visibility
   const [showEmailInput, setShowEmailInput] = useState(false);
   const [email, setEmail] = useState("");
-  const formRef = useRef(null); 
+  const formRef = useRef(null);
 
   const handleNewsletterClick = () => {
     setShowEmailInput(true); // Toggle the visibility
@@ -41,7 +41,7 @@ export default function Footer() {
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (formRef.current && !formRef.current.contains(event.target)) {
-        setShowEmailInput(false); 
+        setShowEmailInput(false);
       }
     };
 
@@ -63,18 +63,22 @@ export default function Footer() {
           </div>
           <p>{t("footer.top-footer.description")}</p>
 
-          {!showEmailInput && (
-            <button
-              className={`${outfit.className}`}
-              onClick={handleNewsletterClick}
-            >
-              {t("footer.top-footer.button")}
-            </button>
-          )}
+          <button
+            id="newsletter-button"
+            className={`${outfit.className}`}
+            onClick={handleNewsletterClick}
+            style={{
+              display: showEmailInput ? "none" : "block",
+              opacity: showEmailInput ? 0 : 1,
+              transition: "all 0.4s ease-in-out",
+            }}
+          >
+            {t("footer.top-footer.button")}
+          </button>
 
           <form
             onSubmit={handleEmailSubmit}
-            ref={formRef} 
+            ref={formRef}
             className="newsletter-form"
             style={{
               transition: "all 0.4s ease-in-out",
@@ -91,6 +95,7 @@ export default function Footer() {
               style={{
                 width: showEmailInput ? "22vw" : "10%",
                 transition: "all 0.5s ease-in-out",
+                display: showEmailInput ? "block" : "none",
               }}
             />
             <button

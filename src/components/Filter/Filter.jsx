@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { FiFilter } from "react-icons/fi";
 import { IoClose } from "react-icons/io5";
 import { FaBottleWater } from "react-icons/fa6";
@@ -11,18 +11,39 @@ export default function Filter({ categories, fatchProducts }) {
   const [selectedCategories, setSelectedCategories] = useState({});
   const localActive = useLocale();
 
+  const formRef = useRef(null);
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (formRef.current && !formRef.current.contains(event.target)) {
+        setFilter(false);
+      }
+    };
+
+    if (filter) {
+      document.addEventListener("mousedown", handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [filter]);
+
   return (
     <>
       <div className="filtres">
-    
-     {selectedCategories.titlefr&&(   <div
-          style={{ cursor: "pointer" }}
-          className="filter2"
-          onClick={() => {fatchProducts(),setSelectedCategories({})}}
-        >
-          <h3> {selectedCategories[`title${localActive}`]} </h3>
-          <LuFilterX size={32}/>
-        </div>)}
+        {selectedCategories.titlefr && (
+          <div
+            style={{ cursor: "pointer" }}
+            className="filter2"
+            onClick={() => {
+              fatchProducts(), setSelectedCategories({});
+            }}
+          >
+            <h3> {selectedCategories[`title${localActive}`]} </h3>
+            <LuFilterX size={32} />
+          </div>
+        )}
         <div
           style={{ cursor: "pointer" }}
           className="filter"
@@ -36,18 +57,21 @@ export default function Filter({ categories, fatchProducts }) {
         style={{ display: filter ? "block" : "none" }}
         onClick={(e) => userClickedOutside(e)}
       ></div>
-      <div className={filter ? "filter-side open-side" : "filter-side"}>
+      <div
+        ref={formRef}
+        className={filter ? "filter-side open-side" : "filter-side"}
+      >
         <ul className="items-filter">
           {categories.map((categorie, index) => (
             <li
               key={index}
               onClick={() => {
                 fatchProducts(categorie._id);
-                setSelectedCategories(categorie)
+                setSelectedCategories(categorie);
                 setFilter(false);
               }}
             >
-              <FaBottleWater />
+              {/* <FaBottleWater /> */}
               {categorie[`title${localActive}`]}
             </li>
           ))}

@@ -336,7 +336,7 @@ body:has(.open-side) img {
   #vision-section {
     padding: 20px 120px;
   }
- 
+
   .grid-card {
     display: flex;
     flex-wrap: wrap;
@@ -401,11 +401,10 @@ body:has(.open-side) img {
   #hero-section,
   #data-section,
   #about-section,
-  #product-section,
-  #vision-section {
+  #vision-section,
+  #product-section .text {
     padding: 20px 40px;
   }
- 
 
   #data-section h2 {
     font-size: 2.8rem;
