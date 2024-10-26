@@ -401,8 +401,8 @@ body:has(.open-side) img {
   #hero-section,
   #data-section,
   #about-section,
-  #product-section,
-  #vision-section {
+  #vision-section,
+  #product-section .text {
     padding: 20px 40px;
   }
 

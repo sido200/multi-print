@@ -5,12 +5,13 @@ import Image from "next/image";
 import whiteLogo from "../../../public/assets/whiteLogo.png";
 import { Outfit } from "next/font/google";
 import { useLocale, useTranslations } from "next-intl";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import Swal from "sweetalert2";
 import { createNewsletter } from "@/app/services/newsletter";
 import Link from "next/link";
 
 const outfit = Outfit({ subsets: ["latin"] });
+
 export default function Footer() {
   const t = useTranslations("HomePage");
   const localActive = useLocale();
@@ -18,6 +19,7 @@ export default function Footer() {
   // State to toggle email input visibility
   const [showEmailInput, setShowEmailInput] = useState(false);
   const [email, setEmail] = useState("");
+  const formRef = useRef(null);
 
   const handleNewsletterClick = () => {
     setShowEmailInput(true); // Toggle the visibility
@@ -26,8 +28,6 @@ export default function Footer() {
   const handleEmailSubmit = (e) => {
     e.preventDefault();
     createNewsletter({ email });
-    console.log(email); // You can send this email to your backend or Brevo here
-
     Swal.fire({
       position: "top-end",
       icon: "success",
@@ -38,6 +38,22 @@ export default function Footer() {
     setEmail("");
   };
 
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (formRef.current && !formRef.current.contains(event.target)) {
+        setShowEmailInput(false);
+      }
+    };
+
+    if (showEmailInput) {
+      document.addEventListener("mousedown", handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [showEmailInput]);
+
   return (
     <footer className="footer">
       <div className="top-footer">
@@ -47,22 +63,22 @@ export default function Footer() {
           </div>
           <p>{t("footer.top-footer.description")}</p>
 
-          {/* Toggle button to show/hide email input */}
-          {!showEmailInput && (
-            <button
-              className={`${outfit.className} ${
-                showEmailInput ? "hidden" : ""
-              }`}
-              onClick={handleNewsletterClick}
-            >
-              {t("footer.top-footer.button")}
-            </button>
-          )}
-
-          {/* Conditional rendering of the email input */}
+          <button
+            id="newsletter-button"
+            className={`${outfit.className}`}
+            onClick={handleNewsletterClick}
+            style={{
+              display: showEmailInput ? "none" : "block",
+              opacity: showEmailInput ? 0 : 1,
+              transition: "all 0.4s ease-in-out",
+            }}
+          >
+            {t("footer.top-footer.button")}
+          </button>
 
           <form
             onSubmit={handleEmailSubmit}
+            ref={formRef}
             className="newsletter-form"
             style={{
               transition: "all 0.4s ease-in-out",
@@ -79,6 +95,7 @@ export default function Footer() {
               style={{
                 width: showEmailInput ? "22vw" : "10%",
                 transition: "all 0.5s ease-in-out",
+                display: showEmailInput ? "block" : "none",
               }}
             />
             <button
@@ -106,13 +123,13 @@ export default function Footer() {
             </Link>
             <Link href="/#about-section">
               <li>{t("about")}</li>
-            </Link>{" "}
+            </Link>
             <Link href={`/${localActive}/Product`}>
               <li>{t("products")}</li>
-            </Link>{" "}
+            </Link>
             <Link href={`/${localActive}/Contact`}>
               <li>{t("contact")}</li>
-            </Link>{" "}
+            </Link>
           </ul>
           <ul>
             <li className="title-liste">
