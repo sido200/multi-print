@@ -32,18 +32,18 @@
   flex-direction: column;
 }
 .yellowtt {
-  background-image: url("../../app/[locale]/assets/frame1.png");
+  background-image: url("../../../public/assets/frame1.png");
 }
 
 .redtt {
-  background-image: url("../../app/[locale]/assets/frame2.png");
+  background-image: url("../../../public/assets/frame2.png");
 }
 
 .bleutt {
-  background-image: url("../../app/[locale]/assets/frame3.png");
+  background-image: url("../../../public/assets/frame3.png");
 }
 .greentt {
-  background-image: url("../../app/[locale]/assets/frame4.png");
+  background-image: url("../../../public/assets/frame4.png");
 }
 .yellow {
   background-color: #fef6d9;

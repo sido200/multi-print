@@ -1,8 +1,6 @@
 "use client";
 import React, { useState } from "react";
 import "./ProductImage.css";
-import productImAGE from "../../app/[locale]/assets/product-details.jpg";
-import Image from "next/image";
 
 export default function ProductImage({ Product }) {
   const [position, setPosition] = useState({ x: 0, y: 0 });
@@ -41,18 +39,17 @@ export default function ProductImage({ Product }) {
         />
       </div>
       <div className="small-image">
-       
-       {Product?.images.map((image,index)=>(
-         <img
-         onClick={()=>setIndex(index)}
-         key={index}
-         src={image}
-         alt="details"
-         style={{
-           objectFit: "cover",
-         }}
-       />
-       ))}
+        {Product?.images.map((image, index) => (
+          <img
+            onClick={() => setIndex(index)}
+            key={index}
+            src={image}
+            alt="details"
+            style={{
+              objectFit: "cover",
+            }}
+          />
+        ))}
       </div>
     </div>
   );

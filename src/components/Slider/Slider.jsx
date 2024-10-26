@@ -1,6 +1,6 @@
 "use client";
 import { Swiper, SwiperSlide } from "swiper/react";
-import produit from "../../app/[locale]/assets/produit.png";
+
 import { FaArrowRight } from "react-icons/fa6";
 import "swiper/css";
 import { Autoplay } from "swiper/modules";
@@ -49,7 +49,7 @@ export default function Slider() {
           });
         }}
       >
-        {pub.map((pub,index) => (
+        {pub.map((pub, index) => (
           <SwiperSlide key={index}>
             <div
               className={`left-slide ${pub.color}tt`}

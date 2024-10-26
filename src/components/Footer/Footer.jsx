@@ -2,7 +2,7 @@
 import "./Footer.css";
 import { FiLinkedin, FiInstagram, FiFacebook } from "react-icons/fi";
 import Image from "next/image";
-import whiteLogo from "../../app/[locale]/assets/whiteLogo.png";
+import whiteLogo from "../../../public/assets/whiteLogo.png";
 import { Outfit } from "next/font/google";
 import { useLocale, useTranslations } from "next-intl";
 import { useState } from "react";
