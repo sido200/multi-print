@@ -1,106 +1,21 @@
-import Slider from "@/components/Slider/Slider";
-
-import DataCard from "@/components/DataCard/DataCard";
-import Image from "next/image";
-import contactImage from "./assets/contact-image.jpg";
-import contactImage2 from "./assets/contact-image2.jpg";
-import icon1 from "../../app/[locale]/assets/icon1.png";
-import icon2 from "../../app/[locale]/assets/icon2.png";
-import icon3 from "../../app/[locale]/assets/icon3.png";
-import ProductSlide from "@/components/ProductSlide/ProductSlide";
-import TestimonialSlider from "@/components/TestimonialSlider/TestimonialSlider";
-import { useLocale, useTranslations } from "next-intl";
-import Link from "next/link";
+import HeroSection from "@/components/hero-section/hero-section";
+import DataSection from "@/components/DataSection/DataSection";
+import AboutSection from "@/components/AboutSection/AboutSection";
+import ProductSection from "@/components/ProductSection/ProductSection";
+import VisionSection from "@/components/VisionSection/VisionSection";
+import ContactSection from "@/components/ContactSection/ContactSection";
+import TestimonialSection from "@/components/TestimonialSection/TestimonialSection";
 
 export default function LandingPage() {
-  const t = useTranslations("HomePage");
-  const localActive = useLocale();
-
   return (
     <main className="landing-page">
-      <section id="hero-section">
-        <Slider />
-      </section>
-      <section id="data-section">
-        <h2>{t("data-title")}</h2>
-        <div className="grid-card">
-          <DataCard icon={icon1}/>
-          <DataCard icon={icon2}/>
-          <DataCard  icon={icon3}/>
-        </div>
-      </section>
-      <section id="about-section">
-        <div className="left-about">
-          <h2> {t("about-section.title")} </h2>
-          <p>{t("about-section.description")}</p>
-          <div className="stat">
-            <div className="stat-1">
-              <h3>+20</h3>
-
-              <p> {t("about-section.stats.label1")}</p>
-            </div>
-            <div className="stat-1">
-              <h3>99%</h3>
-              <p> {t("about-section.stats.label")}</p>
-            </div>
-          </div>
-          <div className="button">
-            <button>
-              <Link href={`/${localActive}/Contact`}>
-                {t("about-section.buttons.contact")}
-              </Link>
-            </button>
-            <button>
-              <Link href={`/${localActive}/Contact`}>
-                {t("about-section.buttons.book")}
-              </Link>
-            </button>
-          </div>
-        </div>
-        <div className="right-about">
-          <Image src={contactImage} alt="contact-image" />
-        </div>
-      </section>
-      <section id="product-section">
-        <div className="text">
-          <h2> {t("product-section.title")} </h2>
-          <p>{t("product-section.description")} </p>
-        </div>
-        <ProductSlide />
-      </section>
-      <section id="vision-section">
-        <div className="left-vision">
-          <Image src={contactImage2} alt="vision-image" />
-        </div>
-        <div className="right-vision">
-          <h2>{t("right-vision.title")}</h2>
-          <h3>{t("right-vision.sections.subtitle1")}</h3>
-          <p>{t("right-vision.sections.text1")}</p>
-          <h3>{t("right-vision.sections.subtitle2")}</h3>
-          <p>{t("right-vision.sections.text2")}</p>
-        </div>
-      </section>
-      <section id="contact-section">
-        <h2> {t("contact-section.title")}</h2>
-        <p>{t("contact-section.description")}</p>
-        <div className="button">
-          <button>
-            <Link href={`/${localActive}/Contact`}>
-              {t("contact-section.buttons.contact")}
-            </Link>
-          </button>
-          <button>
-            <Link href={`/${localActive}/Contact`}>
-              {t("contact-section.buttons.book")}
-            </Link>
-          </button>
-        </div>
-      </section>
-      <section id="Testimonial-section">
-        <h2>{t("Testimonial-section.title")}</h2>
-        <h3>{t("Testimonial-section.subtitle")}</h3>
-        <TestimonialSlider />
-      </section>
+      <HeroSection />
+      <DataSection />
+      <AboutSection />
+      <ProductSection />
+      <VisionSection />
+      <ContactSection />
+      <TestimonialSection />
     </main>
   );
 }

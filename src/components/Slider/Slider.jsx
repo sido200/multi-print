@@ -1,16 +1,15 @@
 "use client";
 import { Swiper, SwiperSlide } from "swiper/react";
-import produit from "../../app/[locale]/assets/produit.png";
 import { FaArrowRight } from "react-icons/fa6";
 import "swiper/css";
 import { Autoplay } from "swiper/modules";
 import "./Slider.css";
-import Image from "next/image";
 import { Outfit } from "next/font/google";
 import Link from "next/link";
 import { useLocale, useTranslations } from "next-intl";
 import { getpub } from "@/app/services/pub";
 import { useEffect, useState } from "react";
+import { Skeleton } from "@mui/material";
 
 const outfit = Outfit({ subsets: ["latin"] });
 
@@ -49,7 +48,7 @@ export default function Slider() {
           });
         }}
       >
-        {pub.map((pub,index) => (
+        { pub.map((pub,index) => (
           <SwiperSlide key={index}>
             <div
               className={`left-slide ${pub.color}tt`}
@@ -69,6 +68,7 @@ export default function Slider() {
             </div>
           </SwiperSlide>
         ))}
+       
       </Swiper>
     </>
   );

@@ -73,10 +73,12 @@ body:has(.open-side) img {
   flex-direction: column;
   padding: 40px 150px;
   gap: 30px;
+
 }
 #data-section h2 {
   font-size: 3.6rem;
   font-weight: 500;
+
 }
 .grid-card {
   display: flex;
