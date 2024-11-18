@@ -1,10 +1,10 @@
 "use client";
 import "./NavBar.css";
 import Image from "next/image";
-import logo from "../../app/[locale]/assets/muliprint.png";
-import en from "../../app/[locale]/assets/en.png";
-import fr from "../../app/[locale]/assets/fr.jpg";
-import ar from "../../app/[locale]/assets/dz.svg";
+import logo from "../../../public/assets/muliprint.png";
+import en from "../../../public/assets/en.png";
+import fr from "../../../public/assets/fr.jpg";
+import ar from "../../../public/assets/dz.svg";
 import { RiMenu3Fill } from "react-icons/ri";
 import { useState, useTransition, useEffect } from "react";
 import { IoClose } from "react-icons/io5";
@@ -23,14 +23,19 @@ export default function NavBar() {
   const pathname = usePathname();
 
   useEffect(() => {
-    if (Language == "ar") {
+    if (Language === "ar") {
       document.body.classList.add("rtl");
+      document.body.style.fontFamily = "'Tajawal', sans-serif";
     } else {
       document.body.classList.remove("rtl");
+      document.body.style.fontFamily = "'Outfit', sans-serif";
     }
+
     if (isLanguage) {
       startTransition(() => {
-        router.replace(`/${Language}${pathname.replace(/^\/[a-z]{2}(?=\/|$)/, "")}`);
+        router.replace(
+          `/${Language}${pathname.replace(/^\/[a-z]{2}(?=\/|$)/, "")}`
+        );
       });
     }
   }, [isLanguage, Language, router]);

@@ -1,5 +1,3 @@
-import Image from "next/image";
-import productImage from "../../app/[locale]/assets/product.jpg";
 import "./CardProduct.css";
 import Link from "next/link";
 import { useLocale } from "next-intl";

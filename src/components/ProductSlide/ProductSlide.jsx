@@ -37,10 +37,11 @@ export default function ProductSlide() {
           clickable: true,
         }}
         modules={[Autoplay]}
+        // slidesPerView={3}
         breakpoints={{
           640: {
             slidesPerView: 1,
-            spaceBetween: 20,
+            spaceBetween: 30,
           },
           768: {
             slidesPerView: 2,
@@ -53,7 +54,7 @@ export default function ProductSlide() {
         }}
         className="mySwiper"
       >
-        {products.map((product,index) => (
+        {products.map((product, index) => (
           <SwiperSlide key={index}>
             <CardProduct product={product} />
           </SwiperSlide>

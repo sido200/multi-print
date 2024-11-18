@@ -1,6 +1,6 @@
 "use client";
 import { Swiper, SwiperSlide } from "swiper/react";
-import profil from "../../app/[locale]/assets/profil.jpg";
+import profil from "../../../public/assets/profil.jpg";
 import "swiper/css";
 import { FaStar } from "react-icons/fa";
 import "./TestimonialSlider.css";
@@ -22,7 +22,7 @@ export default function TestimonialSlider() {
             slidesPerView: 1,
             spaceBetween: 10,
           },
-          
+
           768: {
             slidesPerView: 3,
             spaceBetween: 20,
