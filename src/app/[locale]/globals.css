@@ -79,6 +79,7 @@ body:has(.open-side) img {
 #data-section h2 {
   font-size: 3.6rem;
   font-weight: 500;
+  margin-bottom: 40px;
 
 }
 .grid-card {
@@ -329,6 +330,7 @@ body:has(.open-side) img {
 #Testimonial-section h3 {
   font-size: 3rem;
   font-weight: 600;
+  margin-bottom: 20px;
 }
 
 @media screen and (max-width: 1240px) {

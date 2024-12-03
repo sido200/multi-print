@@ -48,7 +48,7 @@ export default function Slider() {
           });
         }}
       >
-        { pub.map((pub,index) => (
+        {pub.map((pub, index) => (
           <SwiperSlide key={index}>
             <div
               className={`left-slide ${pub.color}tt`}
@@ -68,7 +68,6 @@ export default function Slider() {
             </div>
           </SwiperSlide>
         ))}
-       
       </Swiper>
     </>
   );
