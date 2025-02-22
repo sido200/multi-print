@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React from "react";
 import { motion } from "framer-motion";
 import DataCard from "../DataCard/DataCard";
@@ -12,6 +12,12 @@ const DataSection = () => {
 
   // Liste des icônes pour rendre les DataCards dynamiquement
   const icons = [icon1, icon2, icon3];
+  const titles = ["ISO 9001", "ISO 14001", "HACCP"];
+  const descriptions = [
+    "Card-data-desc-iso9001", // Each description is a translation key
+    "Card-data-desc-iso14001",
+    "Card-data-desc-haccp",
+  ];
 
   return (
     <section id="data-section">
@@ -20,7 +26,6 @@ const DataSection = () => {
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
         viewport={{ once: true }}
-       
       >
         {t("data-title")}
       </motion.h2>
@@ -38,7 +43,11 @@ const DataSection = () => {
             }}
             viewport={{ once: true }}
           >
-            <DataCard icon={icon} />
+            <DataCard
+              icon={icon}
+              title={titles[index]}
+              descriptionKey={descriptions[index]}
+            />
           </motion.div>
         ))}
       </div>

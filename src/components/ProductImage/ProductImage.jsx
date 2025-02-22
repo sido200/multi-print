@@ -6,7 +6,6 @@ export default function ProductImage({ Product }) {
   const [position, setPosition] = useState({ x: 0, y: 0 });
   const [isHovered, setIsHovered] = useState(false);
   const [index, setIndex] = useState(0);
-  console.log(Product);
 
   const handleMouseMove = (e) => {
     const { offsetX, offsetY, target } = e.nativeEvent;

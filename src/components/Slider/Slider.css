@@ -68,8 +68,9 @@
   justify-content: center;
 }
 .right-slide img {
-  height: 75%;
-  width: 70%;
+  height: 100%;
+  width: 100%;
+  margin-left: 30px;
 }
 .left-slide button {
   display: flex;
@@ -120,6 +121,9 @@
   .left-slide,
   .right-slide {
     height: 550px;
+  }
+  .right-slide img{
+    margin-left: 0;
   }
 }
 @media screen and (max-width: 1070px) {

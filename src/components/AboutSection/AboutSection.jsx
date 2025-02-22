@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { motion } from "framer-motion";
 import contactImage from "../../app/[locale]/assets/contact-image.jpg";
 import { useLocale, useTranslations } from "next-intl";
@@ -10,7 +10,10 @@ const AboutSection = () => {
   const localActive = useLocale();
 
   return (
-    <section id="about-section" style={{ display: "flex", alignItems: "center" }}>
+    <section
+      id="about-section"
+      style={{ display: "flex", alignItems: "center" }}
+    >
       {/* Texte avec animation venant de la gauche */}
       <motion.div
         className="left-about"
@@ -23,11 +26,11 @@ const AboutSection = () => {
         <p>{t("about-section.description")}</p>
         <div className="stat">
           <div className="stat-1">
-            <h3>+20</h3>
+            <h3>+7</h3>
             <p>{t("about-section.stats.label1")}</p>
           </div>
           <div className="stat-1">
-            <h3>99%</h3>
+            <h3>+40</h3>
             <p>{t("about-section.stats.label")}</p>
           </div>
         </div>

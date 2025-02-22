@@ -70,10 +70,6 @@ export default function NavBar() {
           >
             <li>{t("contact")}</li>
           </Link>
-          <hr />
-          <Link href="/#Testimonial-section" onClick={() => setIsOpen(false)}>
-            <li>{t("Testimonials")}</li>
-          </Link>
         </ul>
         <div className="close">
           <IoClose

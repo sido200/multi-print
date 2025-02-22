@@ -37,7 +37,7 @@ export default function ProductGrid() {
         <Filter categories={categories} fatchProducts={fetchProducts} />
       </div>
       <div className="grid-product">
-        {products.map((product,index) => (
+        {products.map((product, index) => (
           <CardProduct key={index} product={product} />
         ))}
         {products.length === 0 && (

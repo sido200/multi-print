@@ -1,0 +1,17 @@
+.partenaire-image {
+  width: auto;
+  height: 80px;
+  margin-right: 160px;
+}
+.marquee {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+@media screen and (max-width: 1297px) {
+  .partenaire-image {
+    width: auto;
+    height: 70px;
+    margin-right: 80px;
+  }
+}

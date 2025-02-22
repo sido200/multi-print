@@ -4,18 +4,21 @@ import AboutSection from "@/components/AboutSection/AboutSection";
 import ProductSection from "@/components/ProductSection/ProductSection";
 import VisionSection from "@/components/VisionSection/VisionSection";
 import ContactSection from "@/components/ContactSection/ContactSection";
-import TestimonialSection from "@/components/TestimonialSection/TestimonialSection";
+import MarqueeSection from "@/components/MarqueeSection/MarqueeSection";
+// import TestimonialSection from "@/components/TestimonialSection/TestimonialSection";
 
 export default function LandingPage() {
   return (
     <main className="landing-page">
       <HeroSection />
       <DataSection />
-      <AboutSection />
+      <MarqueeSection />
       <ProductSection />
-      <VisionSection />
+      <AboutSection />
       <ContactSection />
-      <TestimonialSection />
+      <VisionSection />
+
+      {/* <TestimonialSection /> */}
     </main>
   );
 }

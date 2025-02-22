@@ -8,9 +8,10 @@
     "products-title": "Title for the Products",
     "products-details": "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before the final copy is available.",
     "explore-btn": "Explore Products",
-    "Card-data-desc": "Your aspirations fuel our creativity, We begin by listening intently, understanding your goals, and envisioning.",
-    "data-title": "Read the ticket thoroughly to understand the costumer’s",
-    "data-title-title": "Visionary Consultation",
+    "Card-data-desc-iso9001": "It plays a crucial role in helping our company satisfy customers by offering them products with demonstrable quality levels that meet their needs.",
+    "Card-data-desc-iso14001": "Our company aims to manage and reduce its environmental impact through policies and procedures for waste, energy, and natural resource management.",
+    "Card-data-desc-haccp": "Risk analysis and control of critical points; with HACCP, our goal is to strengthen customer trust by demonstrating a commitment to product quality and safety.",
+    "data-title": "Presentation of Our Official ISO Certification and Commitment to Excellence",
     "see-more": "See more",
     "product-section": {
       "title": "Our Latest Products",
@@ -18,12 +19,10 @@
     },
     "about-section": {
       "title": "Discovering Design & Print Mastery Evolution",
-      "description": "Exploring the intersection of vision, innovation, craftsmanship, provision, and performing design & print solutions.",
-
+      "description": "At Multiprint, we tailor our services and schedules to meet each partner's specific needs, ensuring personalized and professional support.",
       "stats": {
         "label1": "Ready to use products",
-
-        "label": "Customer satisfaction"
+        "label": "Years of experience"
       },
       "buttons": {
         "contact": "Contact us",
@@ -33,10 +32,10 @@
     "right-vision": {
       "title": "Multiprint's Journey to Printing Excellence",
       "sections": {
-        "subtitle1": "Vision to Reality",
-        "text1": "Multiprint’s remarkable journey in the realm of design and print innovation has consistently steered the company towards a path of unparalleled excellence.",
-        "subtitle2": "Creating Dreams",
-        "text2": "Pioneering innovation, collaborative excellence, and unwavering commitment to transforming vision into timeless realities."
+        "subtitle1": "Technical expertise",
+        "text1": "Professional, passionate and experienced with state-of-the-art equipment equipment",
+        "subtitle2": "Quality of service",
+        "text2": "Meeting agreed deadlines and high quality standards. quality standards."
       }
     },
     "contact-section": {
@@ -51,7 +50,6 @@
       "title": "Testimonial",
       "subtitle": "What our customers have to say"
     },
-
     "footer": {
       "top-footer": {
         "description": "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to",
@@ -84,7 +82,7 @@
     "name": "Name",
     "first-name": "First Name",
     "email": "Email",
-    "phone":"Phone number",
+    "phone": "Phone number",
     "describ": "Description",
     "send": "Send",
     "qst1": "All the options of the Basic Plan",
