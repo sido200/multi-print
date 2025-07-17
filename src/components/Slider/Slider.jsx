@@ -10,6 +10,7 @@ import { useLocale, useTranslations } from "next-intl";
 import { getpub } from "@/app/services/pub";
 import { useEffect, useState } from "react";
 import { Skeleton } from "@mui/material";
+import { BASE_API_URL } from './../../config/api';
 
 const outfit = Outfit({ subsets: ["latin"] });
 
@@ -64,7 +65,7 @@ export default function Slider() {
               </Link>
             </div>
             <div className={`right-slide ${pub.color}`}>
-              <img src={pub.image} alt="produit" />
+              <img src={BASE_API_URL.replace("/api/v1", "/images/") + pub.image.split("/")[pub.image.split("/").length - 1]} alt="produit" />
             </div>
           </SwiperSlide>
         ))}
