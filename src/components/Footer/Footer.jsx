@@ -152,7 +152,7 @@ export default function Footer() {
             <FiFacebook color="white" size={32} />
           </a>
         </div>
-        <p>{t("footer.copyright")}</p>
+        <p>{"© " + (new Date().getFullYear()) + " " + t("footer.copyright")}</p>
       </div>
     </footer>
   );
