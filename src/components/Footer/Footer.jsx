@@ -135,13 +135,16 @@ export default function Footer() {
             <li className="title-liste">
               {t("footer.top-footer.links.useful-links.title")}
             </li>
-            <li>{t("footer.top-footer.links.useful-links.Give-feedback")}</li>
-            <li>{t("footer.top-footer.links.useful-links.Support")}</li>
+
+            <Link href={`/${localActive}/Contact`}>
+              <li>{t("footer.top-footer.links.useful-links.Give-feedback")}</li>
+            </Link>
+            {/* <li>{t("footer.top-footer.links.useful-links.Support")}</li> */}
           </ul>
         </div>
       </div>
       <div className="bottom-footer">
-        <div className="social">
+        {/* <div className="social">
           <a href="https://instagram.com" target="_blank">
             <FiInstagram color="white" size={32} />
           </a>
@@ -151,7 +154,7 @@ export default function Footer() {
           <a href="https://facebook.com" target="_blank">
             <FiFacebook color="white" size={32} />
           </a>
-        </div>
+        </div> */}
         <p>{"© " + (new Date().getFullYear()) + " " + t("footer.copyright")}</p>
       </div>
     </footer>
