@@ -25,8 +25,8 @@
   height: 15px;
 }
 .items ul li {
-  font-size: 20px;
-  font-weight: 500;
+  font-size: 18px;
+  font-weight: 400;
   line-height: 25.2px;
 }
 .language img {
@@ -96,6 +96,7 @@
 }
 .language > span {
   text-transform: uppercase;
+  font-size: 18px;
 }
 @media screen and (max-width: 1240px) {
   .items {

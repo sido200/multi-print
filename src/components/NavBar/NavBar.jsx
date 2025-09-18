@@ -44,7 +44,7 @@ export default function NavBar() {
     <nav className="nav-bar">
       <div className="logo">
         <Link href="/">
-          <Image src={logo} alt="logo" width={100} height={50} />
+          <Image src={logo} alt="logo" width={100} height={50} unoptimized />
         </Link>
       </div>
       <div className={isOpen ? "items active" : "items"}>
