@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import "./ProductImage.css";
+import { fixLink } from "@/utils/utils";
 
 export default function ProductImage({ Product }) {
   const [position, setPosition] = useState({ x: 0, y: 0 });
@@ -28,7 +29,7 @@ export default function ProductImage({ Product }) {
         onMouseLeave={handleMouseLeave}
       >
         <img
-          src={Product?.images[index]}
+          src={fixLink(Product?.images[index])}
           alt="details"
           className={`zoom-image ${isHovered ? "hovered" : ""}`}
           style={{
@@ -42,7 +43,7 @@ export default function ProductImage({ Product }) {
           <img
             onClick={() => setIndex(index)}
             key={index}
-            src={image}
+            src={fixLink(image)}
             alt="details"
             style={{
               objectFit: "cover",
