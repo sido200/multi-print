@@ -40,8 +40,8 @@ const AboutSection = () => {
               {t("about-section.buttons.contact")}
             </Link>
           </button>
-          <button>
-            <Link href={`/${localActive}/Contact`}>
+          <button style={{padding: "0"}}>
+            <Link href={`/${localActive}/Co"ntact`}>
               {t("about-section.buttons.book")}
             </Link>
           </button>
