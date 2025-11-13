@@ -5,3 +5,7 @@ axios.defaults.withCredentials = true;
 export const createContact = (data) => {
   return axios.post(`${BASE_API_URL}/contact`, data);
 };
+
+export const getEmail = () => {
+  return axios.get(`${BASE_API_URL}/general/email`);
+}

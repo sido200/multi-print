@@ -1,11 +1,12 @@
-"use client"; 
-import { useState } from "react";
+"use client";
+import { useEffect, useState } from "react";
 import { FiUser, FiPhone } from "react-icons/fi";
 import { FaRegFileAlt } from "react-icons/fa";
 import { MdAlternateEmail } from "react-icons/md";
 import Swal from "sweetalert2";
-import { createContact } from "@/app/services/contact";
+import { createContact, getEmail } from "@/app/services/contact";
 import { useTranslations } from "next-intl";
+import emailjs from "@emailjs/browser";
 
 
 const initialFormData = {
@@ -21,14 +22,41 @@ export default function ContactForm() {
   const t = useTranslations("Contact-page");
 
   const handleInputChange = (e) => {
+
     const { name, value } = e.target;
+    console.log(name, value)
     setFormData({ ...formData, [name]: value });
   };
+
+  const [email, setEmail] = useState("");
+  useEffect(() => {
+    getEmail().then((response) => {
+      setEmail(response.data.email);
+    }).catch((error) => {
+      console.error("Error fetching email:", error);
+    });
+  }, [])
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
       await createContact(formData);
+      console.log("FORMDDATAMESSAGE::", formData.message)
+      // send email via EmailJS
+      await emailjs.send(
+        "service_rt5qfza",
+        "template_4bv9nvm",
+        {
+          form_name: formData.name,
+          form_lastname: formData.firstname,
+          form_phone: formData.phone,
+          from_email: formData.email,
+          message: formData.message,
+          to_email: email
+        },
+        "r3PDiq8_Pbn6n8wkt"
+      );
+
       setFormData(initialFormData);
       Swal.fire({
         position: "top-end",
