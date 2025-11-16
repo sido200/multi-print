@@ -137,7 +137,7 @@ export default function Footer() {
             </li>
 
             <Link href={`/${localActive}/Contact`}>
-              <li>{t("footer.top-footer.links.useful-links.Give-feedback")}</li>
+              <li>{t("contact")}</li>
             </Link>
             {/* <li>{t("footer.top-footer.links.useful-links.Support")}</li> */}
           </ul>

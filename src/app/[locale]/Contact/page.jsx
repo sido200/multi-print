@@ -9,7 +9,7 @@ export default function ContactPage() {
   const t = useTranslations("Contact-page");
   return (
     <main className="contact-page">
-      <Question />
+      {/* <Question /> */}
 
       <div className="right">
         <h2>{t("title")}</h2>
