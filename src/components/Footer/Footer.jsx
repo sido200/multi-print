@@ -133,12 +133,12 @@ export default function Footer() {
           </ul>
           <ul>
             <li className="title-liste">
-              {t("footer.top-footer.links.useful-links.title")}
+              {t("contact")}
             </li>
+            <li>+213 (0) 23 930 339</li>
+            <li>+213 (0) 770 654 497</li>
+            <li>contact@sarl-multiprint.com</li>
 
-            <Link href={`/${localActive}/Contact`}>
-              <li>{t("contact")}</li>
-            </Link>
             {/* <li>{t("footer.top-footer.links.useful-links.Support")}</li> */}
           </ul>
         </div>

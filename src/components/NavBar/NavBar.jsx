@@ -49,11 +49,11 @@ export default function NavBar() {
       </div>
       <div className={isOpen ? "items active" : "items"}>
         <ul>
-          <Link href="/#hero-section" onClick={() => setIsOpen(false)}>
+          <Link href={`/${localActive}/#hero-section`} onClick={() => setIsOpen(false)}>
             <li>{t("home")}</li>
           </Link>
           <hr />
-          <Link href="/#about-section" onClick={() => setIsOpen(false)}>
+          <Link href={`/${localActive}/#hero-section`} onClick={() => setIsOpen(false)}>
             <li>{t("about")}</li>
           </Link>
           <hr />

@@ -51,6 +51,7 @@
 .contact-page {
   padding: 20px 150px;
   display: flex;
+  justify-content: center;
   gap: 50px;
 }
 .left > h1 {
@@ -210,6 +211,7 @@
   .contact-page {
     padding: 20px 50px;
     display: flex;
+    justify-content: center;
     gap: 50px;
   }
 }
