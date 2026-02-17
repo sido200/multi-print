@@ -22,6 +22,7 @@
 
   height: 600px;
   object-fit: cover;
+  border: none;
 }
 .left-slide {
   height: 674px;

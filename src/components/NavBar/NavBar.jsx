@@ -53,7 +53,7 @@ export default function NavBar() {
             <li>{t("home")}</li>
           </Link>
           <hr />
-          <Link href={`/${localActive}/#hero-section`} onClick={() => setIsOpen(false)}>
+          <Link href={`/${localActive}/#about-section`} onClick={() => setIsOpen(false)}>
             <li>{t("about")}</li>
           </Link>
           <hr />
