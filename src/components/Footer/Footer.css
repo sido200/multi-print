@@ -188,15 +188,19 @@
 
   .right-footer {
     width: 100%;
+    transform: scale(0.8);
   }
   .footer {
-    height: 700px;
+    height: 1000px;
     padding: 50px 50px 70px 50px;
   }
-
+  .footer-map {
+    width: 100%;
+    margin-top: 50px;
+  }
   .top-footer {
     gap: 50px;
-    height: 443px;
+    height: 800px;
     justify-content: space-between;
     position: relative;
   }
