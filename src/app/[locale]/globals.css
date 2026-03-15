@@ -189,7 +189,7 @@ body:has(.open-side) img {
   height: 48px;
   width: 160px;
   font-weight: 500;
-  padding: 10px 20px;
+  /* padding: 10px 20px; */
   cursor: pointer;
 }
 .button button:last-child a {
@@ -197,7 +197,7 @@ body:has(.open-side) img {
   color: black;
   font-size: 16px;
   font-weight: 500;
-  padding: 10px 20px;
+  /* padding: 10px 20px; */
   cursor: pointer;
   height: 48px;
   width: 160px;
@@ -315,7 +315,7 @@ body:has(.open-side) img {
   background-color: transparent;
   border: 2px solid white;
   color: white;
-  padding: 9px 19px;
+  /* padding: 9px 19px; */
 }
 #contact-section .button button:last-child:hover {
   background-color: rgba(248, 155, 49, 1);

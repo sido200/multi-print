@@ -138,24 +138,26 @@ export default function Footer() {
             <li>+213 (0) 23 930 339</li>
             <li>+213 (0) 770 654 497</li>
             <li>contact@sarl-multiprint.com</li>
+            <li>CW.118, Zone Industrielle BP 21 Oued-Smar 16309 algiers, Algeria</li>
 
             {/* <li>{t("footer.top-footer.links.useful-links.Support")}</li> */}
           </ul>
+          <div className="footer-map">
+            <iframe
+              src={
+                "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3818.172491136201!2d3.2186820762873425!3d36.72804847176269!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x128e502d8729f1c7%3A0xf710a4ffc2dd13ff!2sSarl%20MULTI%20DISTINATIONS%20TOURS!5e1!3m2!1sfr!2sdz!4v1771311406037!5m2!1sfr!2sdz"
+              }
+              width="300"
+              height="300"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Location map"
+            />
+          </div>
         </div>
-        <div className="footer-map">
-          <iframe
-            src={
-              "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3818.172491136201!2d3.2186820762873425!3d36.72804847176269!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x128e502d8729f1c7%3A0xf710a4ffc2dd13ff!2sSarl%20MULTI%20DISTINATIONS%20TOURS!5e1!3m2!1sfr!2sdz!4v1771311406037!5m2!1sfr!2sdz"
-            }
-            width="300"
-            height="300"
-            style={{ border: 0 }}
-            allowFullScreen
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-            title="Location map"
-          />
-        </div>
+
       </div>
       <div className="bottom-footer">
         {/* <div className="social">
