@@ -191,7 +191,7 @@
     transform: scale(0.8);
   }
   .footer {
-    height: 1000px;
+    height: 1100px;
     padding: 50px 50px 70px 50px;
   }
   .footer-map {
@@ -227,12 +227,18 @@
   }
   .right-footer {
     gap: 40px;
+    flex-direction: column;
   }
+
+  .right-footer ul {
+    width : 100%
+  }
+
   .right-footer ul li {
     font-size: 1.2rem;
     font-weight: 400;
     color: white;
-    width: max-content;
+    width: 100%;
   }
   .right-footer ul .title-liste {
     font-size: 1.4rem;
