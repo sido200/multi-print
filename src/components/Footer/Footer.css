@@ -15,10 +15,11 @@
 
 .right-footer {
   display: flex;
-  width: 50%;
+  width: 70%;
   align-items: flex-start;
   justify-content: center;
   gap: 150px;
+  padding-right: 50px;
 }
 .right-footer ul {
   display: flex;
